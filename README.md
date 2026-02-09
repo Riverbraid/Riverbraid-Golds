@@ -1,10 +1,16 @@
-# @riverbraid/$pkg
-> $desc
+# Riverbraid Gold Cluster v1.1
+## Sovereign Cognitive Architecture
 
-## Invariants
-* **Type:** Linear
-* **State:** Stationary
-* **Gate:** Fail-Closed
+This cluster is a physical manifestation of the **Rule-and-Anchor** principle.
 
-## Usage
-This package is a component of the Riverbraid Gold Cluster. It is not intended for extraction.
+### The Invariant Map
+* **Core:** Signal Root
+* **Crypto:** Truth Anchor
+* **Judicial:** Governance Gate
+* **Memory:** Persistence
+* **Safety:** Alignment Filter
+* **Refusal:** Boundary Logic
+* **Integration:** Harmonic Rest
+
+---
+**Status:** STATIONARY | **Tier:** GOLD | **Protocol:** HONEST_ADVISOR
