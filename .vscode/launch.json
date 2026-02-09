@@ -1,0 +1,328 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        ###############################################################################
+# Riverbraid Golds Bootstrap (Codespaces, paste ready, order locked, repeatable)
+#
+# Scope: bootstrap scaffold only (not full Golds implementation).
+# Guarantees:
+#   - real files, real commits, real pushes (unless branch protections block)
+#   - repeatable reruns without corrupting .git/modules
+#   - no npm install required (uses Node's built in test runner: node --test)
+#
+# IMPORTANT:
+#   - If any repo has protected main requiring PRs, push will fail. This script
+#     will stop at that failure (fail closed).
+###############################################################################
+
+###############################################################################
+# 0) Preconditions (run once)
+###############################################################################
+set -euo pipefail
+
+# Must be authenticated for private repos
+gh auth status >/dev/null 2>&1 || { echo "FATAL: gh not authenticated"; exit 1; }
+gh auth setup-git >/dev/null 2>&1 || true
+
+git --version
+node --version
+npm --version
+
+###############################################################################
+# 1) Set variables (paste)
+###############################################################################
+set -euo pipefail
+
+export RIVERBRAID_ORG="Riverbraid"
+export WORKDIR="$HOME/riverbraid_bootstrap"
+mkdir -p "$WORKDIR"
+cd "$WORKDIR"
+
+###############################################################################
+# 2) Install Node 20.11.0 (Codespaces standard via nvm)
+###############################################################################
+set -euo pipefail
+
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+[ -s "$NVM_DIR/nvm.sh" ] || { echo "FATAL:nvm not found at $NVM_DIR/nvm.sh"; exit 1; }
+. "$NVM_DIR/nvm.sh"
+
+nvm install 20.11.0
+nvm use 20.11.0
+node -v | grep -qx "v20.11.0" || { echo "FATAL: Node is not v20.11.0"; exit 1; }
+
+###############################################################################
+# 3) Bootstrap the 6 Gold repos (non blank commits + push)
+###############################################################################
+set -euo pipefail
+
+bootstrap_repo () {
+  local REPO_NAME="$1"
+  local PKG_NAME="$2"
+
+  echo ""
+  echo "=== BOOTSTRAP: $REPO_NAME ==="
+
+  cd "$WORKDIR"
+  rm -rf "$REPO_NAME"
+
+  # Clone repo (works whether empty or non empty)
+  git clone "https://github.com/${RIVERBRAID_ORG}/${REPO_NAME}.git" "$REPO_NAME"
+  cd "$REPO_NAME"
+
+  # Ensure main branch locally
+  git checkout -B main
+
+  # Force LF behavior in this repo
+  git config core.autocrlf false
+  git config core.eol lf
+
+  # .gitattributes (LF)
+  cat > .gitattributes <<'EOF'
+* text=auto eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+EOF
+
+  # README (trailing LF)
+  cat > README.md <<EOF
+# ${REPO_NAME}
+
+Bootstrap scaffold.
+EOF
+
+  # package.json (kept minimal; tests run via node --test, no install needed)
+  cat > package.json <<EOF
+{
+  "name": "${PKG_NAME}",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20.11.0"
+  },
+  "scripts": {
+    "test": "node --test ./test/smoke.test.mjs"
+  }
+}
+EOF
+
+  mkdir -p src test
+
+  # src/index.mjs (trailing LF)
+  cat > src/index.mjs <<EOF
+export function identity() {
+  return {
+    repo: "${REPO_NAME}",
+    package: "${PKG_NAME}",
+    status: "BOOTSTRAP_OK"
+  };
+}
+EOF
+
+  # test/smoke.test.mjs (uses node:test, no npm install required)
+  cat > test/smoke.test.mjs <<'EOF'
+import assert from "node:assert/strict";
+import test from "node:test";
+import { identity } from "../src/index.mjs";
+
+test("bootstrap smoke", () => {
+  const out = identity();
+  assert.equal(typeof out, "object");
+  assert.equal(out.status, "BOOTSTRAP_OK");
+});
+
+console.log("SMOKE_OK");
+EOF
+
+  # Commit (fail closed except for "nothing to commit")
+  git add -A
+  if git diff --cached --quiet; then
+    echo "No changes to commit."
+  else
+    git commit -m "bootstrap: add minimal runnable scaffold"
+  fi
+
+  # Push (fail closed; if branch protection blocks, script stops here)
+  git push -u origin main
+
+  # Quick local verify (also fail closed)
+  node --test ./test/smoke.test.mjs >/dev/null
+
+  cd "$WORKDIR"
+}
+
+bootstrap_repo "Riverbraid-Crypto-Gold" "@riverbraid/crypto-gold"
+bootstrap_repo "Riverbraid-Judicial-Gold" "@riverbraid/judicial-gold"
+bootstrap_repo "Riverbraid-Memory-Gold" "@riverbraid/memory-gold"
+bootstrap_repo "Riverbraid-Refusal-Gold" "@riverbraid/refusal-gold"
+bootstrap_repo "Riverbraid-Safety-Gold" "@riverbraid/safety-gold"
+bootstrap_repo "Riverbraid-Integration-Gold" "@riverbraid/integration-gold"
+
+echo ""
+echo "=== DONE: 6 Gold repos bootstrapped ==="
+
+###############################################################################
+# 4) Bootstrap the root repo Riverbraid-Golds (submodules + deterministic runner)
+###############################################################################
+set -euo pipefail
+
+ROOT_REPO="Riverbraid-Golds"
+
+echo ""
+echo "=== BOOTSTRAP: $ROOT_REPO (root) ==="
+
+cd "$WORKDIR"
+rm -rf "$ROOT_REPO"
+git clone "https://github.com/${RIVERBRAID_ORG}/${ROOT_REPO}.git" "$ROOT_REPO"
+cd "$ROOT_REPO"
+git checkout -B main
+
+git config core.autocrlf false
+git config core.eol lf
+
+cat > .gitattributes <<'EOF'
+* text=auto eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+EOF
+
+cat > README.md <<'EOF'
+# Riverbraid Golds
+
+Bootstrap root repo.
+
+This repo pulls the Gold repos as git submodules and runs their smoke tests in a fixed order.
+EOF
+
+cat > package.json <<'EOF'
+{
+  "name": "@riverbraid/golds",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20.11.0"
+  },
+  "scripts": {
+    "fetch": "node ./scripts/fetch.mjs",
+    "test": "node ./scripts/test-all.mjs"
+  }
+}
+EOF
+
+mkdir -p scripts
+
+# fetch.mjs (repeatable, safe; removes submodules via git rm + deinit, no .git/modules nuking)
+cat > scripts/fetch.mjs <<EOF
+import fs from "node:fs";
+import { execSync } from "node:child_process";
+
+const subs = [
+  ["Riverbraid-Crypto-Gold", "crypto"],
+  ["Riverbraid-Judicial-Gold", "judicial"],
+  ["Riverbraid-Memory-Gold", "memory"],
+  ["Riverbraid-Refusal-Gold", "refusal"],
+  ["Riverbraid-Safety-Gold", "safety"],
+  ["Riverbraid-Integration-Gold", "integration"]
+];
+
+function sh(cmd, opts = {}) {
+  execSync(cmd, { stdio: "inherit", ...opts });
+}
+
+function shQuiet(cmd) {
+  try { execSync(cmd, { stdio: "ignore" }); } catch {}
+}
+
+// Rerun safety: remove existing submodule working dirs and index entries cleanly.
+for (const [, dir] of subs) {
+  if (fs.existsSync(dir) || fs.existsSync(\`.git/modules/\${dir}\`)) {
+    shQuiet(\`git submodule deinit -f -- \${dir}\`);
+    // If it is a tracked submodule, git rm is the correct removal.
+    shQuiet(\`git rm -f -- \${dir}\`);
+    // If it is just an untracked dir, remove it.
+    try { fs.rmSync(dir, { recursive: true, force: true }); } catch {}
+  }
+}
+
+// If .gitmodules exists but is now empty, remove it from index.
+if (fs.existsSync(".gitmodules")) {
+  const txt = fs.readFileSync(".gitmodules", "utf8");
+  if (!txt.trim()) {
+    shQuiet("git rm -f -- .gitmodules");
+  }
+}
+
+for (const [repo, dir] of subs) {
+  sh(\`git submodule add https://github.com/${RIVERBRAID_ORG}/\${repo}.git \${dir}\`);
+}
+
+sh("git submodule update --init --recursive");
+EOF
+
+# test-all.mjs (no npm install needed; uses node --test inside each submodule)
+cat > scripts/test-all.mjs <<'EOF'
+import fs from "node:fs";
+import { execSync } from "node:child_process";
+
+const order = ["crypto", "judicial", "memory", "refusal", "safety", "integration"];
+
+for (const dir of order) {
+  if (!fs.existsSync(`${dir}/test/smoke.test.mjs`)) {
+    throw new Error(`Missing smoke test: ${dir}/test/smoke.test.mjs`);
+  }
+}
+
+for (const dir of order) {
+  console.log(`\n=== TEST: ${dir} ===`);
+  execSync("node --test ./test/smoke.test.mjs", { cwd: dir, stdio: "inherit" });
+}
+
+console.log("\nALL_OK");
+EOF
+
+# Fetch submodules
+node ./scripts/fetch.mjs
+
+# Commit (fail closed except for "nothing to commit")
+git add -A
+if git diff --cached --quiet; then
+  echo "No changes to commit."
+else
+  git commit -m "bootstrap: root repo with submodules and test runner"
+fi
+
+# Push (fail closed)
+git push -u origin main
+
+echo ""
+echo "=== DONE: Root bootstrapped ==="
+
+###############################################################################
+# 5) Verify end to end (no npm install required)
+###############################################################################
+set -euo pipefail
+cd "$WORKDIR/Riverbraid-Golds"
+node ./scripts/test-all.mjs
+
+
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Launch Edge against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
