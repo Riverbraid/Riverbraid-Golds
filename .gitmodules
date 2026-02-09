@@ -7,3 +7,6 @@
 [submodule "packages/judicial-gold"]
 	path = packages/judicial-gold
 	url = https://github.com/Riverbraid/Riverbraid-Judicial-Gold.git
+[submodule "packages/integration-gold"]
+	path = packages/integration-gold
+	url = https://github.com/Riverbraid/Riverbraid-Integration-Gold.git
