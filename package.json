@@ -1,0 +1,14 @@
+{
+  "name": "@riverbraid/golds-root",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node scripts/verify.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

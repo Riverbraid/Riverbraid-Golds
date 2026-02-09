@@ -1,0 +1,9 @@
+[submodule "packages/core"]
+	path = packages/core
+	url = https://github.com/Riverbraid/Riverbraid-Core.git
+[submodule "packages/crypto-gold"]
+	path = packages/crypto-gold
+	url = https://github.com/Riverbraid/Riverbraid-Crypto-Gold.git
+[submodule "packages/judicial-gold"]
+	path = packages/judicial-gold
+	url = https://github.com/Riverbraid/Riverbraid-Judicial-Gold.git
