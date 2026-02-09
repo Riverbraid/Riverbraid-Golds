@@ -1,0 +1,17 @@
+name: Braid Coherence Gate
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run Braid Sync
+        run: |
+          chmod +x braid-sync.sh
+          ./braid-sync.sh

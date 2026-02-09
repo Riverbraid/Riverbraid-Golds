@@ -1,14 +1,16 @@
 {
-  "name": "@riverbraid/golds-root",
-  "private": true,
+  "name": "@riverbraid/golds",
+  "version": "1.1.0",
+  "description": "Sovereign Cognitive Architecture Gold Cluster",
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "test": "node scripts/verify.mjs"
+    "hygiene": "node run-vectors.cjs",
+    "test": "vitest run",
+    "verify": "./braid-sync.sh",
+    "build": "npm run hygiene && npm run test && npm run verify",
+    "lock": "git add . && git commit -m 'Braid: Absolute V2 Seal' && git push origin main"
   },
-  "engines": {
-    "node": ">=20.0.0"
+  "devDependencies": {
+    "vitest": "^1.0.0"
   }
 }
