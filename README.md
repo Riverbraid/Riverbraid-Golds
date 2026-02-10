@@ -35,24 +35,23 @@ Every module in this cluster is gated by a `verify.mjs` script. If a module's in
 
 ---
 
-## 📜 The Gold Invariants (v1.1)
-This cluster operates under a **Fail-Closed** discipline. Coherence is maintained through four primary logical gates:
 
-### 1. The Coupling Test
-A petal is considered valid only if its **Internal Meaning** is computationally coupled to its **Thermodynamic Signal**.
-* **Requirement:** `node verify.mjs` must return `exit(0)` only when the `README.md` contains the specific Invariant Status marker.
-* **Failure Mode:** Any drift in the signature triggers an immediate system-rest state.
+---
 
-### 2. Scale Separation Gate
-Logic is bifurcated to prevent complexity bleed:
-* **Root Level:** Manages **Contextual Coherence** and the Navigation Map.
-* **Petal Level:** Manages **Executable Logic** and specific Boundary Rules.
+## 🛡️ Sovereign Spec: The Gold Invariants (v1.1.2)
 
-### 3. State Definitions
-* **Linear Tags:** `hygiene` → `assemble` → `build` → `vectors`.
-* **Nonlinear Tags:** The `Riverbraid` essence—meaning as primary, tokens as secondary.
+### I. The Coupling Invariant
+**Definition:** A Petal is coherent if and only if its Internal State ($) matches its External Signal ($).
+* **Gate:** `node verify.mjs`
+* **Constraint:** Predicate match on "[Signal: * | Braid: CLOSED-LOOP]"
+* **Action:** Fail-Closed (Exit 1) on any mismatch.
 
-### 4. Stationary State Invariant
-Meaning is defined as the internal frequency of a system successfully navigating environmental entropy:
+### II. Scale Separation Protocol
+**Definition:** Hierarchical scoping of logic to prevent entropy bleed.
+* **Root Scope:** Navigation, Cross-Linking, Global Invariants.
+* **Petal Scope:** Internal Logic, Verification Gates, Protocol Steps.
 
-$$M = F_{int} 
+### III. Thermodynamic Meaning (The Anchor)
+Meaning is not a token sequence; it is a signal of environmental navigation.
+
+$$M := F_{internal} 
