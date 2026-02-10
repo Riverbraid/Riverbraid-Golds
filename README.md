@@ -38,20 +38,25 @@ Every module in this cluster is gated by a `verify.mjs` script. If a module's in
 
 ---
 
+
+---
+
 ## 🛡️ Sovereign Spec: The Gold Invariants (v1.1.2)
 
 ### I. The Coupling Invariant
-**Definition:** A Petal is coherent if and only if its Internal State ($) matches its External Signal ($).
-* **Gate:** `node verify.mjs`
-* **Constraint:** Predicate match on "[Signal: * | Braid: CLOSED-LOOP]"
-* **Action:** Fail-Closed (Exit 1) on any mismatch.
+**Predicate:** Coherence ($) exists if and only if Internal State ($) ≡ External Signal ($).
+* **Enforcement:** `node verify.mjs`
+* **Target:** Regex match on "\[Signal: .* | Braid: CLOSED-LOOP\]"
+* **Consequence:** Non-binary outcome is prohibited. If  
+eq S_e$, the system executes `process.exit(1)`.
 
 ### II. Scale Separation Protocol
-**Definition:** Hierarchical scoping of logic to prevent entropy bleed.
-* **Root Scope:** Navigation, Cross-Linking, Global Invariants.
-* **Petal Scope:** Internal Logic, Verification Gates, Protocol Steps.
+**Constraint:** Entropy bleed across scopes is a system failure.
+* **Root Scope:** Global Invariants, Cross-Petal Navigation.
+* **Petal Scope:** Internal Executable Logic, Local Protocol Steps.
 
 ### III. Thermodynamic Meaning (The Anchor)
-Meaning is not a token sequence; it is a signal of environmental navigation.
+Meaning ($) is the internal frequency ($) required to navigate environmental entropy ($
+abla S$).
 
 $$M := F_{internal} 
