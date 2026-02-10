@@ -32,3 +32,27 @@ npm run build
 
 ### Invariant Contract
 Every module in this cluster is gated by a `verify.mjs` script. If a module's internal state drifts from its mathematical anchor, the system enters a **Fail-Closed** state and refuses execution.
+
+---
+
+## 📜 The Gold Invariants (v1.1)
+This cluster operates under a **Fail-Closed** discipline. Coherence is maintained through four primary logical gates:
+
+### 1. The Coupling Test
+A petal is considered valid only if its **Internal Meaning** is computationally coupled to its **Thermodynamic Signal**.
+* **Requirement:** `node verify.mjs` must return `exit(0)` only when the `README.md` contains the specific Invariant Status marker.
+* **Failure Mode:** Any drift in the signature triggers an immediate system-rest state.
+
+### 2. Scale Separation Gate
+Logic is bifurcated to prevent complexity bleed:
+* **Root Level:** Manages **Contextual Coherence** and the Navigation Map.
+* **Petal Level:** Manages **Executable Logic** and specific Boundary Rules.
+
+### 3. State Definitions
+* **Linear Tags:** `hygiene` → `assemble` → `build` → `vectors`.
+* **Nonlinear Tags:** The `Riverbraid` essence—meaning as primary, tokens as secondary.
+
+### 4. Stationary State Invariant
+Meaning is defined as the internal frequency of a system successfully navigating environmental entropy:
+
+$$M = F_{int} 
