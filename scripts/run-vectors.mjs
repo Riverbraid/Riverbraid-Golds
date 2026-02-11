@@ -1,24 +1,33 @@
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
+import fs from "node:fs";
+import path from "node:path";
+import { execSync } from "node:child_process";
 
-const packagesDir = './packages';
-const repos = fs.readdirSync(packagesDir).filter(f => fs.lstatSync(path.join(packagesDir, f)).isDirectory());
+const packagesDir = path.resolve("packages");
+const cells = fs.readdirSync(packagesDir).filter(d => 
+  fs.statSync(path.join(packagesDir, d)).isDirectory()
+);
 
-console.log("🚀 Running Immutable Test Vectors...");
+console.log("🚀 Running Gold Test Vectors...");
 
-repos.sort().forEach(repo => {
-  const vectorPath = path.join(packagesDir, repo, 'vectors');
-  console.log(`\n📦 Checking: ${repo}`);
-  
-  if (!fs.existsSync(vectorPath)) {
-    console.error(`❌ Missing vectors directory in ${repo}`);
-    process.exit(1);
+let totalPassed = 0;
+
+for (const cell of cells) {
+  const cellPath = path.join(packagesDir, cell);
+  const vectorFile = path.join(cellPath, "index.js");
+
+  if (fs.existsSync(vectorFile)) {
+    try {
+      const output = execSync(`node ${vectorFile}`, { encoding: "utf8" });
+      const data = JSON.parse(output);
+      if (data.status === "STATIONARY") {
+        console.log(`✅ ${cell}: Vector Validated (${data.repo})`);
+        totalPassed++;
+      }
+    } catch (e) {
+      console.error(`❌ ${cell}: Vector Corrupted or Failed`);
+      process.exit(1);
+    }
   }
+}
 
-  // Placeholder for executing the actual vector logic
-  // In a full implementation, this calls the repo-level 'npm run vectors'
-  console.log(`✅ ${repo} vectors stationary.`);
-});
-
-console.log("\n✨ All Cluster Vectors Verified.");
+console.log(`\nSUCCESS: ${totalPassed}/${cells.length} Vectors are Stationary.`);

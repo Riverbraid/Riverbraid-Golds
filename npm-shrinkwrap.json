@@ -1717,21 +1717,27 @@
       }
     },
     "packages/crypto-gold": {
+      "name": "@riverbraid/crypto-gold",
       "version": "1.1.0"
     },
     "packages/integration-gold": {
+      "name": "@riverbraid/riverbraid-integration-gold",
       "version": "1.0.0"
     },
     "packages/judicial-gold": {
+      "name": "@riverbraid/judicial-gold",
       "version": "1.1.0"
     },
     "packages/memory-gold": {
+      "name": "@riverbraid/riverbraid-memory-gold",
       "version": "1.0.0"
     },
     "packages/refusal-gold": {
+      "name": "@riverbraid/riverbraid-refusal-gold",
       "version": "1.0.0"
     },
     "packages/safety-gold": {
+      "name": "@riverbraid/riverbraid-safety-gold",
       "version": "1.0.0"
     }
   }

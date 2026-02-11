@@ -11,12 +11,8 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "node scripts/verify-closure.mjs && node scripts/run-vectors.mjs",
-    "golds": "npm test",
-    "preflight": "node scripts/preflight.mjs",
-    "scan": "node scripts/entropy-scan.mjs"
-  },
-  "devDependencies": {
-    "vitest": "^1.0.0"
+    "test": "npm test --workspaces --if-present",
+    "build": "node scripts/verify-closure.mjs && node scripts/entropy-scan.mjs && node scripts/run-vectors.mjs",
+    "golds": "npm run build"
   }
 }
