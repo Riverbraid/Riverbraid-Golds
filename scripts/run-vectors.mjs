@@ -8,19 +8,18 @@ const cells = fs.readdirSync(packagesDir).filter(d =>
 );
 
 console.log("🚀 Running Gold Test Vectors...");
-
 let totalPassed = 0;
 
 for (const cell of cells) {
   const cellPath = path.join(packagesDir, cell);
   const vectorFile = path.join(cellPath, "index.js");
-
   if (fs.existsSync(vectorFile)) {
     try {
       const output = execSync(`node ${vectorFile}`, { encoding: "utf8" });
       const data = JSON.parse(output);
       if (data.status === "STATIONARY") {
-        console.log(`✅ ${cell}: Vector Validated (${data.repo})`);
+        const name = data.petal || data.repo || cell;
+        console.log(`✅ ${cell}: Vector Validated (${name})`);
         totalPassed++;
       }
     } catch (e) {
@@ -29,5 +28,4 @@ for (const cell of cells) {
     }
   }
 }
-
 console.log(`\nSUCCESS: ${totalPassed}/${cells.length} Vectors are Stationary.`);
