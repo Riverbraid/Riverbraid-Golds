@@ -1,0 +1,22 @@
+{
+  "name": "riverbraid-golds",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "riverbraid-golds",
+      "workspaces": [
+        "packages/Riverbraid-Crypto-Gold",
+        "packages/Riverbraid-Judicial-Gold",
+        "packages/Riverbraid-Integration-Gold",
+        "packages/Riverbraid-Refusal-Gold",
+        "packages/Riverbraid-Memory-Gold",
+        "packages/Riverbraid-Safety-Gold"
+      ],
+      "engines": {
+        "node": "20.11.0",
+        "npm": "10.2.4"
+      }
+    }
+  }
+}

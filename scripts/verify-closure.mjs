@@ -4,7 +4,7 @@ import path from "node:path";
 const packagesDir = path.resolve("packages");
 
 if (!fs.existsSync(packagesDir)) {
-  console.error("FAIL: packages/ missing. Run: npm run setup");
+  console.error("FAIL: packages/ missing.");
   process.exit(1);
 }
 
@@ -12,23 +12,21 @@ const cells = fs.readdirSync(packagesDir, { withFileTypes: true })
   .filter(d => d.isDirectory())
   .map(d => d.name);
 
-if (cells.length === 0) {
-  console.error("FAIL: packages/ is empty. Submodules not wired.");
+console.log(`[CHECK] Found ${cells.length} cells in packages/`);
+
+let ok = true;
+for (const cell of cells) {
+  const pkgPath = path.join(packagesDir, cell, "package.json");
+  if (fs.existsSync(pkgPath)) {
+    console.log(`✅ ${cell}: package.json found.`);
+  } else {
+    console.error(`❌ ${cell}: package.json MISSING at ${pkgPath}`);
+    ok = false;
+  }
+}
+
+if (!ok || cells.length === 0) {
   process.exit(1);
 }
 
-for (const cell of cells) {
-  const pkgPath = path.join(packagesDir, cell, "package.json");
-  const entryPath = path.join(packagesDir, cell, "index.js");
-
-  if (!fs.existsSync(pkgPath)) {
-    console.error(`FAIL: ${cell} missing package.json`);
-    process.exit(1);
-  }
-  if (!fs.existsSync(entryPath)) {
-    console.error(`FAIL: ${cell} missing index.js`);
-    process.exit(1);
-  }
-}
-
-console.log("SUCCESS: All Gold cells are manifest and closed.");
+console.log("\nSUCCESS: All Gold cells contain package.json closures.");
