@@ -1,21 +1,17 @@
-# Riverbraid Gold V1.1: Mechanical Truth
+# TRUTH: Riverbraid Gold V1.1 (Stationary)
 
-**Generated:** Wed Feb 11 17:55:51 UTC 2026
-**Status:** STATIONARY
+**Reference:** STATIONARY_FINALITY_V1_1
+**Status:** ANCHORED
 **Anchor:** Go 44
 
-## Verified Invariants
-1. **Node Anchor**: Locked to v20.11.0 via `package.json` engines.
-2. **Linear Gate**: All 6 petals verify closure and stationary vectors via `npm run golds`.
-3. **Entropy Floor**: System forbids `Math.random` and `Date.now` in governed paths.
-4. **Mechanical Honesty**: Fail-closed behavior demonstrated on Wed Feb 11 17:55:51 UTC 2026.
+## 1. System Invariants
+- **Entropy Ban:** Strictly enforced across all petals.
+- **Mechanical Honesty:** Repository states governed by identity.contract.json.
+- **Fail-Closed:** Judicial-Gold defaults to DENY.
 
-## Cluster Topography
-- @riverbraid/crypto-gold
-- @riverbraid/judicial-gold
-- @riverbraid/integration-gold
-- @riverbraid/memory-gold
-- @riverbraid/refusal-gold
-- @riverbraid/safety-gold
+## 2. Toolchain
+- **Node:** v20.11.0
+- **Env:** TZ=UTC, LC_ALL=C
 
-*The Riverbraid is not scattering sparks; it is weaving constellations.*
+## 3. Semantic Bridge
+- Established through deterministic translation vectors.

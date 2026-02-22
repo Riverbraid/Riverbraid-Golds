@@ -1,0 +1,10 @@
+{
+  "version": "1.1.0",
+  "anchor": "Go 44",
+  "hashes": {
+    "judicial_rules": "677c92ee9f09d61137692936d796548ab9e56f40c8173c4fd5549f83bfd43bf5",
+    "entropy_scanner": "6fed0ca2e4b6fdf37a63473404f9299b8460a43a79f4827d962e2f054ca5143f",
+    "truth_document": "6c8abe501788cf8c5e606042851b71d5a03d590d30dd09a95d26619a762b40c5"
+  },
+  "status": "VERIFIED_STATIONARY"
+}

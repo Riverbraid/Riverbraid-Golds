@@ -1,0 +1,7 @@
+{
+  "contract_class": "IDENTITY_CONTRACT",
+  "version": "1.1.0",
+  "repo_name": "Riverbraid-Golds",
+  "repo_role": "HUB_COORDINATOR",
+  "governed_files": ["riverbraid-verify.sh", "package.json", "TRUTH.md"]
+}

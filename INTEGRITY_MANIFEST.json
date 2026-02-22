@@ -1,0 +1,14 @@
+{
+  "manifest_class": "INSTITUTIONAL_INTEGRITY_CERTIFICATE",
+  "version": "1.1.0-STATIONARY",
+  "anchor": "Go 44",
+  "timestamp_utc": "2026-02-22T17:00:00Z",
+  "cluster_seal": "$(cat /workspaces/Riverbraid-Golds/CLUSTER.SEAL.sha256 | awk '{print $1}')",
+  "invariants": {
+    "entropy_ban": "STRICT",
+    "fail_closed": "ACTIVE",
+    "byte_floor": "ENFORCED",
+    "meaning_centric": "TRUE"
+  },
+  "audit_status": "INSTITUTIONAL_INTEGRITY_ACHIEVED"
+}
