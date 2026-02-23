@@ -7,15 +7,12 @@
 [submodule "packages/judicial-gold"]
 	path = packages/judicial-gold
 	url = https://github.com/Riverbraid/Riverbraid-Judicial-Gold.git
-[submodule "packages/integration-gold"]
-	path = packages/integration-gold
-	url = https://github.com/Riverbraid/Riverbraid-Integration-Gold.git
 [submodule "packages/memory-gold"]
 	path = packages/memory-gold
 	url = https://github.com/Riverbraid/Riverbraid-Memory-Gold.git
-[submodule "packages/safety-gold"]
-	path = packages/safety-gold
-	url = https://github.com/Riverbraid/Riverbraid-Safety-Gold.git
-[submodule "packages/refusal-gold"]
-	path = packages/refusal-gold
-	url = https://github.com/Riverbraid/Riverbraid-Refusal-Gold.git
+[submodule "packages/integration-gold"]
+	path = packages/integration-gold
+	url = https://github.com/Riverbraid/Riverbraid-Integration-Gold.git
+[submodule "packages/harness"]
+	path = packages/harness
+	url = https://github.com/Riverbraid/Riverbraid-Harness.git
