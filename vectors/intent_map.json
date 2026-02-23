@@ -1,0 +1,20 @@
+{
+  "version": "1.1.0",
+  "vectors": [
+    {
+      "intent": "start_verification",
+      "symbols": ["INIT", "SCAN_ENTROPY", "AUDIT_TAGS"],
+      "action": "riverbraid-verify.sh"
+    },
+    {
+      "intent": "seal_protocol",
+      "symbols": ["FREEZE_STATE", "EMIT_SIGNAL_STATIONARY"],
+      "action": "scripts/seal-all.sh"
+    },
+    {
+      "intent": "capacity_check",
+      "symbols": ["SOMATIC_GATE", "PRESSURE_VALVE"],
+      "action": "src/capacity-gate.mjs"
+    }
+  ]
+}

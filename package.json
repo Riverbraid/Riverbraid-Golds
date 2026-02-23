@@ -1,15 +1,8 @@
 {
-  "name": "@riverbraid/golds",
-  "version": "1.1.0",
-  "description": "Institutional-grade deterministic verification cluster coordinator",
-  "main": "manifest.js",
-  "type": "module",
+  "name": "riverbraid-golds",
+  "version": "1.0.0",
   "engines": {
-    "node": ">=18.0.0"
-  },
-  "scripts": {
-    "test": "bash riverbraid-verify.sh",
-    "verify": "node src/verify.mjs || node src/verify.js || echo No verify script found"
-  },
-  "license": "Apache-2.0"
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
 }

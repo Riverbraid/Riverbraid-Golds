@@ -1,8 +1,15 @@
 {
-  "entity": "Riverbraid-Golds",
+  "name": "Riverbraid-Golds",
   "version": "1.0.0",
-  "license": "Apache-2.0",
-  "standard": "STATIONARY_STATE_V1",
-  "signal": "ORCHESTRATION_HUB",
-  "seal": "VERIFIED_GOLD_PETAL"
+  "role": "CLUSTER_CONTROLLER",
+  "governance": "Closed-Loop",
+  "governed_files": [
+    "identity.contract.json",
+    "gate2_byte_audit.py",
+    "gate3_entropy_scan.py",
+    "gate4_generate_seal.py",
+    "gate5_coherence_check.py",
+    "gate6_invariant_validator.py"
+  ],
+  "invariants": ["Coherence", "Stationary"]
 }
