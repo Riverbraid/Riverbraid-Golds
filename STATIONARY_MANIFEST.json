@@ -1,10 +1,37 @@
 {
-  "version": "1.1.0",
-  "anchor": "Go 44",
-  "hashes": {
-    "judicial_rules": "677c92ee9f09d61137692936d796548ab9e56f40c8173c4fd5549f83bfd43bf5",
-    "entropy_scanner": "6fed0ca2e4b6fdf37a63473404f9299b8460a43a79f4827d962e2f054ca5143f",
-    "truth_document": "6c8abe501788cf8c5e606042851b71d5a03d590d30dd09a95d26619a762b40c5"
+  "manifest_version": "1.2",
+  "status": "INSTITUTIONAL_LOCK",
+  "timestamp": "2026-02-23T13:03:00Z",
+  "governance": {
+    "standard": "Apache-2.0",
+    "policy": "FAIL_CLOSED",
+    "signals": [
+      "MECHANICAL_HONESTY",
+      "LEAST_ENTROPY",
+      "MEANING_CENTRIC",
+      "SEMANTIC_BRIDGE"
+    ]
   },
-  "status": "VERIFIED_STATIONARY"
+  "cluster_topology": {
+    "hub": "Riverbraid-Golds",
+    "core": "Riverbraid-Core",
+    "petals": [
+      "Riverbraid-Crypto-Gold",
+      "Riverbraid-Judicial-Gold",
+      "Riverbraid-Memory-Gold",
+      "Riverbraid-Integration-Gold"
+    ],
+    "orchestrator": "Riverbraid-Harness"
+  },
+  "invariants": {
+    "character_encoding": "ASCII-7",
+    "entropy_threshold": 0.0,
+    "determinism": "STRICT_PATH_ONLY",
+    "meaning_persistence": "THERMODYNAMIC_THRESHOLD"
+  },
+  "audit_seal": {
+    "method": "SHA-256",
+    "verification_script": "audit-all.sh",
+    "state": "STATIONARY"
+  }
 }
