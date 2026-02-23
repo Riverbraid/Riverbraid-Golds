@@ -1,4 +1,1 @@
-# Contributing to Riverbraid
-1. Maintain the Stationary State.
-2. No wall-clock timestamps in governed files.
-3. Every commit must pass the internal verify scripts.
+# Contributing\n\n1. Maintain Stationarity.\n2. No wall-clocks.\n3. Pass verify scripts.
