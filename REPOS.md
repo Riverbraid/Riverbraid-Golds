@@ -1,11 +1,14 @@
-# Riverbraid Gold Cluster: Institutional Index
-**Standard:** Apache-2.0 | **Policy:** FAIL_CLOSED | **Status:** STATIONARY
+# Riverbraid Institutional Index (V1.2)
 
-| Repository | Institutional Description | Topics |
+| Repository | Institutional Role | Primary Signal |
 | :--- | :--- | :--- |
-| **Golds** | The Hub: Identity, Verification, and Stationary Manifest. | `governance`, `stationary-state`, `fail-closed` |
-| **Crypto-Gold** | Petal: Mechanical honesty and cryptographic auditability. | `cryptography`, `verification`, `blockchain` |
-| **Judicial-Gold** | Petal: Fail-closed blockade logic and entropy gating. | `policy-engine`, `safety`, `logic` |
-| **Memory-Gold** | Petal: Thermodynamic meaning persistence and hygiene. | `memory-safety`, `entropy`, `persistence` |
-| **Integration-Gold** | Petal: The Semantic Bridge (Abstract to Concrete). | `translation`, `mapping`, `structure` |
-| **Harness** | The physical layer entry point and audit engine. | `testing`, `audit`, `infrastructure` |
+| **Golds (Hub)** | Cluster Orchestration & Policy | `STATIONARY_VERIFICATION` |
+| **Core** | Deterministic Anchor & Invariants | `FAIL_CLOSED_GATE` |
+| **Crypto-Gold** | SHA-256 Hashing & State Sealing | `MECHANICAL_HONESTY` |
+| **Judicial-Gold** | Fail-Closed Policy Enforcement | `DETERMINISTIC_DENY` |
+| **Memory-Gold** | Meaning-Centric Persistence | `STATE_STATIONARITY` |
+| **Integration-Gold** | Semantic Bridge & Vector Mapping | `SYMBOLIC_ALIGNMENT` |
+| **Harness** | Entropy Audit & Physical Guard | `ZERO_ENTROPY` |
+
+---
+*All repositories are licensed under Apache-2.0 and require Node.js >= 18.0.0.*
