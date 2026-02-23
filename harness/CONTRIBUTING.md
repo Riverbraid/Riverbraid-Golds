@@ -1,1 +1,1 @@
-# Contributing\n\n1. Maintain Stationarity.\n2. No wall-clocks.\n3. Pass verify scripts.
+# Contributing\n\n1. Maintain Stationarity (No wall-clocks).\n2. Meaning is Primary; Tokens are Secondary.\n3. Pass all verify scripts.
