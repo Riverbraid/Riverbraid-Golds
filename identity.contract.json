@@ -1,14 +1,8 @@
 {
-  "contract_class": "IDENTITY_CONTRACT",
-  "version": "1.1.0",
-  "repo_name": "Riverbraid-Golds",
-  "repo_role": "HUB_COORDINATOR",
-  "governed_files": [
-    "TRUTH.md",
-    "output.wav",
-    "overdose_test.wav",
-    "package.json",
-    "riverbraid-verify.sh",
-    "temporal_bridge.wav"
-  ]
+  "entity": "Riverbraid-Golds",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "standard": "STATIONARY_STATE_V1",
+  "signal": "ORCHESTRATION_HUB",
+  "seal": "VERIFIED_GOLD_PETAL"
 }

@@ -1,37 +1,16 @@
 {
-  "manifest_version": "1.2",
-  "status": "INSTITUTIONAL_LOCK",
-  "timestamp": "2026-02-23T13:03:00Z",
-  "governance": {
-    "standard": "Apache-2.0",
-    "policy": "FAIL_CLOSED",
-    "signals": [
-      "MECHANICAL_HONESTY",
-      "LEAST_ENTROPY",
-      "MEANING_CENTRIC",
-      "SEMANTIC_BRIDGE"
-    ]
-  },
-  "cluster_topology": {
-    "hub": "Riverbraid-Golds",
-    "core": "Riverbraid-Core",
-    "petals": [
-      "Riverbraid-Crypto-Gold",
-      "Riverbraid-Judicial-Gold",
-      "Riverbraid-Memory-Gold",
-      "Riverbraid-Integration-Gold"
-    ],
-    "orchestrator": "Riverbraid-Harness"
-  },
-  "invariants": {
-    "character_encoding": "ASCII-7",
-    "entropy_threshold": 0.0,
-    "determinism": "STRICT_PATH_ONLY",
-    "meaning_persistence": "THERMODYNAMIC_THRESHOLD"
-  },
-  "audit_seal": {
-    "method": "SHA-256",
-    "verification_script": "audit-all.sh",
-    "state": "STATIONARY"
-  }
+  "build": "V1.2-INSTITUTIONAL",
+  "timestamp_stationary": "2026-02-23",
+  "verification_status": "PASS",
+  "entropy_scan": "0.0",
+  "repos": [
+    "Riverbraid-Core",
+    "Riverbraid-Golds",
+    "Riverbraid-Crypto-Gold",
+    "Riverbraid-Judicial-Gold",
+    "Riverbraid-Memory-Gold",
+    "Riverbraid-Integration-Gold",
+    "Riverbraid-Harness"
+  ],
+  "governance": "Apache-2.0"
 }

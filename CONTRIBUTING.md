@@ -1,4 +1,4 @@
 # Contributing to Riverbraid
-Contributions are gated by the **Scale Separation Gate**.
-1. Submissions must not increase raw compute volume without a 10x increase in coherence.
-2. Meaning must be primary; tokens are secondary.
+1. **Stationarity**: No dynamic timestamps or entropy sources.
+2. **Mechanical Honesty**: Code must match the architectural claim.
+3. **Fail-Closed**: All new logic must default to a DENY state.

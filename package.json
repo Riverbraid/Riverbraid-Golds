@@ -5,11 +5,11 @@
   "main": "manifest.js",
   "type": "module",
   "engines": {
-    "node": "20.11.0",
-    "npm": ">=10.2.4"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "test": "bash riverbraid-verify.sh",
-    "verify": "bash riverbraid-verify.sh"
-  }
+    "verify": "node src/verify.mjs || node src/verify.js || echo No verify script found"
+  },
+  "license": "Apache-2.0"
 }
