@@ -1,22 +1,25 @@
-# Riverbraid Gold Cluster Architecture
+# Riverbraid Gold Cluster – Architecture Specification
+**Version:** 1.1 (Stationary State)  
+**Status:** Governance-Locked Reference Standard  
 
-The Riverbraid Gold Cluster is a sovereign, closed-loop intelligence architecture. It scales in **coherence**, not in raw compute.
+## 1. System Topology
+The cluster follows a **Hub and Petal** formation, where the Hub (Golds) manages the identity and verification of specialized logic units.
 
-## 1. System Topology (Hub & Petal)
 
-- **Hub (Riverbraid-Golds):** The central root of trust. Holds the `CLUSTER.SEAL.sha256` and the master OID manifest.
-- **Core (Riverbraid-Core):** The reference standard for governance and deterministic logic.
-- **Petals:** Domain-specific logic units (Crypto, Judicial, Memory, Integration).
-- **Harness:** The executable orchestrator for cluster-wide integrity audits.
 
-## 2. The Verification Loop
-Invariants are enforced through a recursive verification gate:
-1. **Physical:** `riverbraid-verify.sh` checks byte-identity (Stationary State).
-2. **Logical:** `validate-rules.mjs` checks the Fail-Closed blockade.
-3. **Semantic:** `Identity Contracts` check alignment with Riverbraid principles.
+## 2. Boot & Verification Sequence
+The system enforces stationarity through a recursive verification chain:
+
+1. **Harness**: Physical layer audit (ASCII-7 enforcement, entropy check).
+2. **Golds (Hub)**: Cryptographic manifest verification (`CLUSTER.SEAL.sha256`).
+3. **Core**: Deterministic governance constants (Frozen Core).
+4. **Petals**: Domain-specific invariant enforcement (Crypto, Judicial, Memory, Integration).
 
 ## 3. Signal Lexicon
-- **MECHANICAL_HONESTY (Crypto):** Mathematical proof of state.
-- **LEAST_ENTROPY (Judicial):** Fail-closed blockade logic.
-- **MEANING_CENTRIC (Memory):** Thermodynamic threshold for persistence.
-- **SEMANTIC_BRIDGE (Integration):** Translation between Source and Action.
+- **MECHANICAL_HONESTY (Crypto)**: Mathematical proof of state.
+- **LEAST_ENTROPY (Judicial)**: Fail-closed blockade logic.
+- **MEANING_CENTRIC (Memory)**: Thermodynamic threshold for persistence.
+- **SEMANTIC_BRIDGE (Integration)**: Abstract-to-Concrete translation.
+
+## 4. Invariant: Fail-Closed
+Any breach of a signal at any layer results in an immediate halt. No partial or corrupted state is ever emitted.
