@@ -1,19 +1,19 @@
-# Riverbraid Gold Cluster Architecture
+# Riverbraid Gold Cluster – Architecture Specification
 **Version:** 1.2 (Institutional Complete)  
 **Status:** Governance-Locked Reference Standard  
 
 ## 1. System Topology
-The cluster follows a **Hub and Petal** formation. The Hub (Golds) manages the identity and verification of specialized logic units.
+The cluster follows a **Hub and Petal** formation. The Hub (Golds) manages the identity and verification of specialized logic units (Petals).
 
 ## 2. Boot & Verification Sequence
 The system enforces stationarity through a recursive verification chain:
 
 
 
-1. **Harness**: External physical layer audit (ASCII-7, entropy check).
+1. **Harness**: Entry point. Checks ASCII-7 compliance and entropy (audit-all.sh).
 2. **Golds (Hub)**: Cryptographic manifest verification (`CLUSTER.SEAL.sha256`).
-3. **Core**: Deterministic governance constants (Frozen Core).
-4. **Petals**: Domain-specific invariant enforcement (Crypto, Judicial, Memory, Integration).
+3. **Core**: Deterministic governance constants and Frozen Core logic.
+4. **Petals**: Domain-specific invariant enforcement (Signals).
 
 ## 3. Signal Lexicon
 - **MECHANICAL_HONESTY (Crypto)**: Mathematical proof of state.
