@@ -3,5 +3,12 @@
   "version": "1.1.0",
   "repo_name": "Riverbraid-Golds",
   "repo_role": "HUB_COORDINATOR",
-  "governed_files": ["riverbraid-verify.sh", "package.json", "TRUTH.md"]
+  "governed_files": [
+    "TRUTH.md",
+    "output.wav",
+    "overdose_test.wav",
+    "package.json",
+    "riverbraid-verify.sh",
+    "temporal_bridge.wav"
+  ]
 }

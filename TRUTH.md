@@ -1,15 +1,14 @@
-# TRUTH: Riverbraid Gold V1.1 (Stationary)
-# Generated: 2026-02-22 (Mechanical Finality)
+# Riverbraid Gold V1.1: Stationary State Invariants
 
-## System State
-* **Status:** STATIONARY_FINALITY
-* **Entropy Floor:** BANNED (Date, Math.random, UUID)
-* **ASCII Floor:** 7-bit ASCII ✓
+## Manifested Artifacts
+* **output.wav**: 18-character anchor (238,184 bytes).
+* **overdose_test.wav**: 3-strand static resonance (Peak 22006/32767).
+* **temporal_bridge.wav**: 5-second dynamic ascent (A2 -> A3).
 
-## Verification
-* **Harness Integrity:** PASS (Professional Structure Materialized)
-* **Internal Frequency:** 0.81 (STABLE)
-* **Predictions:** 7/7 Verified (Somatic Gate Implementation COMPLETE)
+## Cognitive Invariants
+* **Coupling Test**: Passed via VisualScanner.cjs.
+* **Scale Separation**: ESM environment bypassed via .cjs extension.
+* **Internal Frequency**: 110Hz Root.
 
-## Persistence Anchor
-This manifest is the anchor. If this file drifts, the braid is broken.
+## Current State
+The Foundational Floor is set in the /workspaces/Riverbraid-Golds directory. The system is coherent.
