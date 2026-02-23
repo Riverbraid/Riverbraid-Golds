@@ -19,3 +19,8 @@ Tokens.
 main
 Tokens.
 /assets/*
+*.wav
+*.log
+main
+Tokens.
+/assets/*
