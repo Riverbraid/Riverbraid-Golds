@@ -9,3 +9,8 @@ Tokens.
 *.log
 main
 Tokens.
+*.wav
+*.log
+main
+Tokens.
+/assets/*
