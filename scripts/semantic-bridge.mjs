@@ -14,4 +14,4 @@ export const translateToSource = (practicalTerm) => {
   return DICTIONARY[practicalTerm] || "UNKNOWN_VIBRATION";
 };
 
-console.log("🌉 Semantic Bridge: TRANSLATION_LOGIC_ANCHORED");
+console.log(" Semantic Bridge: TRANSLATION_LOGIC_ANCHORED");

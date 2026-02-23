@@ -18,9 +18,9 @@ let ok = true;
 for (const cell of cells) {
   const pkgPath = path.join(packagesDir, cell, "package.json");
   if (fs.existsSync(pkgPath)) {
-    console.log(`✅ ${cell}: package.json found.`);
+    console.log(` ${cell}: package.json found.`);
   } else {
-    console.error(`❌ ${cell}: package.json MISSING at ${pkgPath}`);
+    console.error(` ${cell}: package.json MISSING at ${pkgPath}`);
     ok = false;
   }
 }

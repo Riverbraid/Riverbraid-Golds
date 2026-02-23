@@ -7,7 +7,7 @@ const cells = fs.readdirSync(packagesDir).filter(d =>
   fs.statSync(path.join(packagesDir, d)).isDirectory()
 );
 
-console.log("🚀 Running Gold Test Vectors...");
+console.log(" Running Gold Test Vectors...");
 let totalPassed = 0;
 
 for (const cell of cells) {
@@ -19,11 +19,11 @@ for (const cell of cells) {
       const data = JSON.parse(output);
       if (data.status === "STATIONARY") {
         const name = data.petal || data.repo || cell;
-        console.log(`✅ ${cell}: Vector Validated (${name})`);
+        console.log(` ${cell}: Vector Validated (${name})`);
         totalPassed++;
       }
     } catch (e) {
-      console.error(`❌ ${cell}: Vector Corrupted or Failed`);
+      console.error(` ${cell}: Vector Corrupted or Failed`);
       process.exit(1);
     }
   }

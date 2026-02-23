@@ -14,7 +14,7 @@ const scanDir = (dir) => {
       const content = fs.readFileSync(fullPath, 'utf8');
       BANNED.forEach(regex => {
         if (regex.test(content)) {
-          console.error(`❌ Entropy violation in ${fullPath}: ${regex}`);
+          console.error(` Entropy violation in ${fullPath}: ${regex}`);
           process.exit(1);
         }
       });
@@ -22,6 +22,6 @@ const scanDir = (dir) => {
   });
 };
 
-console.log("🔍 Scanning for non-deterministic entropy...");
+console.log(" Scanning for non-deterministic entropy...");
 scanDir('./packages');
-console.log("✅ No forbidden entropy detected.");
+console.log(" No forbidden entropy detected.");
