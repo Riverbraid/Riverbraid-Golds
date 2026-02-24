@@ -1,15 +1,11 @@
 {
-  "name": "Riverbraid-Golds",
-  "version": "1.0.0",
-  "role": "CLUSTER_CONTROLLER",
-  "governance": "Closed-Loop",
-  "governed_files": [
-    "identity.contract.json",
-    "gate2_byte_audit.py",
-    "gate3_entropy_scan.py",
-    "gate4_generate_seal.py",
-    "gate5_coherence_check.py",
-    "gate6_invariant_validator.py"
-  ],
-  "invariants": ["Coherence", "Stationary"]
+  "name": "Riverbraid-Core-Gold",
+  "role": "Frozen Core – Foundational Invariant Layer",
+  "signal": "DETERMINISTIC_REPRODUCIBILITY",
+  "version": "1.1",
+  "invariant": "Identical inputs → identical outputs. No external dependencies. 7-bit ASCII floor enforced.",
+  "RIVERBRAID_SECRET_REQUIREMENT": "Mandatory – missing or invalid aborts execution",
+  "anchor_date": "2026-02-24",
+  "gpg_fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4",
+  "merkle_root_reference": "de2062"
 }
