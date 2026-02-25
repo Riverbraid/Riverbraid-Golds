@@ -8,7 +8,7 @@
 | Petal | Verified Hash |
 | :--- | :--- |
 | **Core** | 6134943d38ca7f4eb8915395cf10051fc9e094956e9960af06eca940143f7297 |
-| **Golds** | 9662a7adaee23f690a34fe77907615bf38724da89edc14af2cc1d11557a79b56 |
+| **Golds** | 4abfa501ddde610053939770842878d6d9e51bffbf800c3aac829eb13d0354ab |
 | **Harness-Gold** | 3bfcc5bda03d3a196271e595be2e6ece8e01d5caaa9e1b4801a3864f47abe3bd |
 | **Integration-Gold** | 49d438744f56fcd36d769811b02aa9ce93a561af2296842e22b06fe9c664aa27 |
 | **Judicial-Gold** | a2c6ec73fdbc0dea944a56c639261e2f96f67b68800c5e5791b6d835a9451710 |
