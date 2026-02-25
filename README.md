@@ -38,8 +38,8 @@ get_entry_point() {
 
 # 1. Clean & Preflight (Assuming Harness is now public)
 cd /workspaces/Riverbraid-Golds
-node ../Riverbraid-Harness/scripts/clean.js
-node ../Riverbraid-Harness/scripts/preflight.mjs
+node ../Riverbraid-Harness-Gold/scripts/clean.js
+node ../Riverbraid-Harness-Gold/scripts/preflight.mjs
 
 # 2. Judicial Gate (The Law)
 echo "⚖️ Invoking Judicial Gate..."

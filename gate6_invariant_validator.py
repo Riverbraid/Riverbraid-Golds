@@ -1,6 +1,6 @@
 # @linear
 import json, sys, os
-REPOS = ['Riverbraid-Core', 'Riverbraid-Golds', 'Riverbraid-Crypto-Gold', 'Riverbraid-Judicial-Gold', 'Riverbraid-Memory-Gold', 'Riverbraid-Integration-Gold', 'Riverbraid-Harness']
+REPOS = ['Riverbraid-Core', 'Riverbraid-Golds', 'Riverbraid-Crypto-Gold', 'Riverbraid-Judicial-Gold', 'Riverbraid-Memory-Gold', 'Riverbraid-Integration-Gold', 'Riverbraid-Harness-Gold']
 def fatal(msg): print(f'FATAL:INVARIANT_VIOLATION:{msg}'); sys.exit(1)
 print('STARTING GATE 6: INVARIANT VALIDATION')
 for r in REPOS:

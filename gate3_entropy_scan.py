@@ -2,7 +2,7 @@
 import json, os, sys
 # Obfuscated tokens to prevent self-detection
 FORBID = ["Date" + ".now", "new Date" + "(", "performance" + ".now", "Math" + ".random", "crypto" + ".randomUUID"]
-REPOS = ["Riverbraid-Core", "Riverbraid-Golds", "Riverbraid-Crypto-Gold", "Riverbraid-Judicial-Gold", "Riverbraid-Memory-Gold", "Riverbraid-Integration-Gold", "Riverbraid-Harness"]
+REPOS = ["Riverbraid-Core", "Riverbraid-Golds", "Riverbraid-Crypto-Gold", "Riverbraid-Judicial-Gold", "Riverbraid-Memory-Gold", "Riverbraid-Integration-Gold", "Riverbraid-Harness-Gold"]
 
 def fatal(msg):
     print("FATAL:" + msg)

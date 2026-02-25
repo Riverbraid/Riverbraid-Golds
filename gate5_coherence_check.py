@@ -1,6 +1,6 @@
 # @linear
 import json, sys, os
-REPOS = ['Riverbraid-Core', 'Riverbraid-Golds', 'Riverbraid-Crypto-Gold', 'Riverbraid-Judicial-Gold', 'Riverbraid-Memory-Gold', 'Riverbraid-Integration-Gold', 'Riverbraid-Harness']
+REPOS = ['Riverbraid-Core', 'Riverbraid-Golds', 'Riverbraid-Crypto-Gold', 'Riverbraid-Judicial-Gold', 'Riverbraid-Memory-Gold', 'Riverbraid-Integration-Gold', 'Riverbraid-Harness-Gold']
 def fatal(msg): print(f'FATAL:{msg}'); sys.exit(1)
 cn, cm = None, None
 print('STARTING GATE 5')

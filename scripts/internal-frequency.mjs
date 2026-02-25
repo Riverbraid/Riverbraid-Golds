@@ -12,7 +12,7 @@ const REPOS = [
   'Riverbraid-Judicial-Gold',
   'Riverbraid-Memory-Gold',
   'Riverbraid-Integration-Gold',
-  'Riverbraid-Harness'
+  'Riverbraid-Harness-Gold'
 ];
 
 function calculateInternalFrequency() {

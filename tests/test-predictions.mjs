@@ -4,7 +4,7 @@ import path from 'node:path';
 import { execSync } from 'node:child_process';
 
 const WORKSPACE = '/workspaces';
-const REPOS = ['Riverbraid-Core', 'Riverbraid-Golds', 'Riverbraid-Harness'];
+const REPOS = ['Riverbraid-Core', 'Riverbraid-Golds', 'Riverbraid-Harness-Gold'];
 
 console.log('--- SEVEN TESTABLE PREDICTIONS V1.1 ---');
 

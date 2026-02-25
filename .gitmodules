@@ -15,4 +15,4 @@
 	url = git@github.com:Riverbraid/Riverbraid-Integration-Gold.git
 [submodule "packages/harness"]
 	path = packages/harness
-	url = https://github.com/Riverbraid/Riverbraid-Harness.git
+	url = https://github.com/Riverbraid/Riverbraid-Harness-Gold.git

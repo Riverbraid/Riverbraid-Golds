@@ -7,7 +7,7 @@ echo "--- CLUSTER VERIFICATION: MULTI-PETAL SCAN ---"
 BASE_DIR="/workspaces"
 
 # Verification targets
-PETALS=("Riverbraid-Core" "Riverbraid-Crypto-Gold" "Riverbraid-Memory-Gold" "Riverbraid-Harness-Gold")
+PETALS=("Riverbraid-Core" "Riverbraid-Crypto-Gold" "Riverbraid-Memory-Gold" "Riverbraid-Harness-Gold-Gold")
 
 for repo in "${PETALS[@]}"; do
   if [ -d "$BASE_DIR/$repo" ]; then
