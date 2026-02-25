@@ -5,6 +5,11 @@
 
 It operates within the **Riverbraid Gold Cluster** under a **Fail-Closed** discipline: if any part of the system deviates from its anchored frequency (commit hash), the cluster halts to prevent entropy leakage.
 
+## 🏛️ About and Topics
+Description: Gold Cluster root — sovereign cognitive architecture manifest. Orchestrates all Gold petals via the Absolute V2 pipeline.
+
+Topics: governance, deterministic, ai, gold-cluster, riverbraid, orchestration, monorepo
+
 ## 🗝️ Core Functions
 * Manifest Authority
 * Node Mapping
