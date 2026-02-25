@@ -1,45 +1,38 @@
-# ⚓ Riverbraid-Golds
+# Riverbraid Golds
+## Authority Hub and Cluster Manifest
+This repository serves as the central specification and truth anchor for the Riverbraid Gold Cluster.
 
-## 📜 Overview
-**Riverbraid-Golds** is the master hub and manifest authority for the Riverbraid Gold Cluster. 
+### Verification
+Execute the deterministic invariant check:
+```bash
+npm test
+cd /workspaces/Riverbraid-Judicial-Gold
 
-It operates within the **Riverbraid Gold Cluster** under a **Fail-Closed** discipline: if any part of the system deviates from its anchored frequency (commit hash), the cluster halts to prevent entropy leakage.
+# 1. Purge node_modules and update ignore
+rm -rf node_modules/
+echo "node_modules/" >> .gitignore
+git rm -r --cached node_modules/ 2>/dev/null || true
 
-## 🏛️ About and Topics
-Description: Gold Cluster root — sovereign cognitive architecture manifest. Orchestrates all Gold petals via the Absolute V2 pipeline.
+# 2. Inject Full MIT License
+export FULL_MIT="Copyright 2026 Riverbraid Sovereignty Protocol\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+echo -e "$FULL_MIT" > LICENSE
 
-Topics: governance, deterministic, ai, gold-cluster, riverbraid, orchestration, monorepo
-
-## 🗝️ Core Functions
-* Manifest Authority
-* Node Mapping
-* Cluster Coordination
-* **Institutional Alignment:** Fully compliant with the v1.1.0 stationary mandate.
-
-## 🧬 Stationary State Invariant
-The system is anchored in the principle of $dS/dt = 0$ (Zero Entropy Growth).
-> "A system is secure if and only if it is in a secure state and all state transitions preserve security." — McLean (1994)
-
-## 🛡️ Governance
-This petal is a part of the **Riverbraid Gold v1.1.0** release.
-* **Merkle Root:** `de2062`
-* **Fingerprint:** `D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4`
-* **Status:** STATIONARY_STATE_ACTIVE
-* **License:** MIT
-
----
-*Signed by the Honest Advisor Protocol.*
-
----
-## McLean (2026) Primary Coherence Anchor
-This repository operates under the σ (sigma) stationary precedent. Meaning is the Internal Frequency of a system successfully navigating environmental entropy.
-
----
-## McLean (2026) Primary Coherence Anchor
-This repository operates under the σ (sigma) stationary precedent. Meaning is the Internal Frequency of a system successfully navigating environmental entropy.
-
----
-## McLean (2026) Primary Coherence Anchor
-This repository operates under the σ (sigma) stationary precedent.
-Equation: σ = 1 / (1 + σ)
-Meaning is the Internal Frequency of a system successfully navigating environmental entropy.
+# 3. Standardize identity.contract.json
+cat << 'EOF' > identity.contract.json
+{
+  "name": "riverbraid-judicial-gold",
+  "version": "1.1.0",
+  "governance": "McLean (2026) Primary Coherence",
+  "governed_files": [
+    "README.md",
+    "package.json",
+    "identity.contract.json",
+    "LICENSE",
+    "grammar.pegjs",
+    "policy.rules"
+  ],
+  "invariants": {
+    "entropy_ban": true,
+    "deterministic_output": true
+  }
+}

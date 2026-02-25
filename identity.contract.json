@@ -1,10 +1,15 @@
 {
-  "contract_class": "IDENTITY_CONTRACT",
+  "name": "riverbraid-golds",
   "version": "1.1.0",
-  "repo_name": "Riverbraid-Golds",
-  "repo_role": "HUB_COORDINATOR",
-  "invariants": { 
-    "entropy_ban": true, 
-    "ascii_only": true 
+  "governance": "McLean (2026) Primary Coherence",
+  "governed_files": [
+    "README.md",
+    "package.json",
+    "identity.contract.json",
+    "LICENSE"
+  ],
+  "invariants": {
+    "entropy_ban": true,
+    "deterministic_output": true
   }
 }
