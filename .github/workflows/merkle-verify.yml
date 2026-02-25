@@ -15,7 +15,7 @@ jobs:
 
       - name: "Calculate Local Hash"
         run: |
-          LOCAL_HASH=$(find . -type f -not -path '*/.*' | sort | xargs sha256sum | sha256sum | awk '{print $1}')
+          LOCAL_HASH=$(find . -type f -not -path '*/.*' -not -path './.github/*' -not -name 'TRUTH.md' | sort | xargs sha256sum | sha256sum | awk '{print $1}')
           echo "CURRENT_HASH=$LOCAL_HASH" >> $GITHUB_ENV
           echo "Local Hash: $LOCAL_HASH"
 
