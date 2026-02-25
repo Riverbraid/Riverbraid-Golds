@@ -1,0 +1,33 @@
+name: "Merkle Root Verification"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify-coherence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Source"
+        uses: actions/checkout@v4
+
+      - name: "Calculate Local Hash"
+        run: |
+          LOCAL_HASH=$(find . -type f -not -path '*/.*' | sort | xargs sha256sum | sha256sum | awk '{print $1}')
+          echo "CURRENT_HASH=$LOCAL_HASH" >> $GITHUB_ENV
+          echo "Local Hash: $LOCAL_HASH"
+
+      - name: "Validate Against TRUTH.md"
+        run: |
+          EXPECTED_HASH=$(grep "| \*\*Golds\*\*" TRUTH.md | awk -F'|' '{print $3}' | xargs)
+          echo "Comparing Current: $CURRENT_HASH"
+          echo "Against Manifest: $EXPECTED_HASH"
+          
+          if [ "$CURRENT_HASH" != "$EXPECTED_HASH" ]; then
+            echo "::error::FREQUENCY DISTORTION DETECTED. Local state does not match TRUTH.md invariant."
+            exit 1
+          else
+            echo "::notice::COHERENCE ACHIEVED. Stationary state confirmed."
+          fi
