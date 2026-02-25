@@ -102,7 +102,7 @@ const CONSTANTS = {
 // ============================================================
 
 const checkFloor = (buffer, label) => {
-  if (!Buffer.isBuffer(buffer)) buffer = Buffer.from(String(buffer), "utf8");
+  if (!Buffer.isBuffer(buffer)) { buffer = Buffer.from(String(buffer), "utf8"); } else { /* Buffer verified */ }
   if (buffer.length === 0) throw new Error(`FATAL:G03_ZERO_LENGTH:${label}`);
   if (buffer.length >= 3 && buffer[0] === 0xEF && buffer[1] === 0xBB && buffer[2] === 0xBF) {
     throw new Error(`FATAL:G03_BOM:${label}`);
