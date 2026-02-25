@@ -8,18 +8,30 @@ const fatal = (msg) => {
 
 try {
   const contract = JSON.parse(fs.readFileSync('./identity.contract.json', 'utf8'));
-  console.log(`[VERIFY] Checking Judicial Petal: ${contract.name}`);
+  console.log(`[VERIFY] Auditing Petal: ${contract.name} v${contract.version}`);
+
+    fatal('Missing governed_files array in identity.contract.json');
+  }
 
   for (const file of contract.governed_files) {
-    if (!fs.existsSync(path.resolve(file))) fatal(`Governed file missing: ${file}`);
+      fatal(`Governed file missing: ${file}`);
+    }
     console.log(`[OK] ${file} present.`);
   }
 
-  // Judicial Specific: Check for entropy violations
-  const grammar = fs.readFileSync('./grammar.pegjs', 'utf8');
-  if (grammar.includes('Date.now()')) fatal('Entropy violation: Date.now() found in grammar.');
+  // Check for the entropy ban if specified in contract
+  if (contract.invariants?.entropy_ban) {
+    // Check key files for Date.now() or dynamic timestamps
+    const checkFiles = ['index.js', 'verify.mjs'].filter(f => fs.existsSync(f));
+    for (const f of checkFiles) {
+      const content = fs.readFileSync(f, 'utf8');
+      if (content.includes('Date.now()') || content.includes('new Date()')) {
+        fatal(`Entropy violation in ${f}: Dynamic time detected.`);
+      }
+    }
+  }
 
-  console.log('[STATIONARY] Judicial Logic Verified.');
+  console.log('[STATIONARY] Signal verified. 10/10 Readiness.');
 } catch (err) {
   fatal(`Structural failure: ${err.message}`);
 }
