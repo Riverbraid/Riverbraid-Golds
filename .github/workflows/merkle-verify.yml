@@ -21,7 +21,7 @@ jobs:
 
       - name: "Validate Against TRUTH.md"
         run: |
-          EXPECTED_HASH=$(grep "| **Golds**" TRUTH.md | awk -F'|' '{print $3}' | xargs)
+          EXPECTED_HASH=$(grep "| **Golds**" TRUTH.md | grep -oE "[0-9a-f]{64}" | head -n 1)
           echo "Comparing Current: $CURRENT_HASH"
           echo "Against Manifest: $EXPECTED_HASH"
           
