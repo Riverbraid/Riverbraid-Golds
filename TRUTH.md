@@ -8,10 +8,10 @@
 | Petal | Verified Hash |
 | :--- | :--- |
 | **Core** | 6134943d38ca7f4eb8915395cf10051fc9e094956e9960af06eca940143f7297 |
-| **Golds** | 24dfdd0407bd7698b578591272db2c93ea8b5034f400e9758ac03325ad145e1c |
+| **Golds** | bd79226a13774e260f4b95472de24c2ebf417b504c33ddc7dda5392b8a4ab943 |
 | **Harness-Gold** | b3db665e5a5f4cba33976e1e0a0994df0120a9289143a6635f4610cd54329287 |
 | **Integration-Gold** | eca6d90be0ba7664b904eb352c2f514c0223350b25ae3cc4cc5543e5c6025246 |
-| **Judicial-Gold** | 5366c63925aa57108b1fb16d69b5238c381e439dd8fe2aa3fa8ae3b961870893 |
+| **Judicial-Gold** | c722154c9f64f8c7cfd604d7221bd3bc90f10bb5cee46817f7fc2467c9eafe3c |
 
 | **Crypto-Gold** | 7e9e70d0376b2339dae9f07d5235e373bafdd05bfcf239e4e9036b9cff45854e |
 | **Memory-Gold** | e947af723b70e8bb72b467ed835262299644ea9bf26d3cc0578deebb3eb49899 |
