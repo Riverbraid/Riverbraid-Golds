@@ -1,16 +1,15 @@
 {
-  "build": "V1.2-INSTITUTIONAL",
-  "timestamp_stationary": "2026-02-23",
-  "verification_status": "PASS",
-  "entropy_scan": "0.0",
-  "repos": [
-    "Riverbraid-Core",
-    "Riverbraid-Golds",
-    "Riverbraid-Crypto-Gold",
-    "Riverbraid-Judicial-Gold",
-    "Riverbraid-Memory-Gold",
-    "Riverbraid-Integration-Gold",
-    "Riverbraid-Harness"
-  ],
-  "governance": "Apache-2.0"
+  "manifest_version": "1.1.0",
+  "timestamp": "2026-02-25T00:38:56Z",
+  "merkle_root": "de2062",
+  "gpg_fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4",
+  "nodes": {
+    "Core": "c34ac43edcc058aa703e65bca92422cf2550c8ee",
+    "Crypto": "d1299534a9448ddec864754fde0ee882d36aa391",
+    "Judicial": "94439d7903575c4ac87e55cf43bfb3114b8276a5",
+    "Memory": "8d8da15be9a68c9f4bec491a70a54da165715814",
+    "Integration": "e92680ea85ba292a64294238b183446055247cf2",
+    "Harness": "3c439d39894ea594310dbb87abe1d1bae0ea47ad"
+  },
+  "status": "STATIONARY_STATE_ACTIVE"
 }
