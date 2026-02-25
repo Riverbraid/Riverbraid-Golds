@@ -1,0 +1,13 @@
+# Riverbraid Organization Manifest
+> Version: 1.1.0 | Status: Stationary | Merkle Root: de2062
+
+## 🌌 Philosophy
+Riverbraid is a governance-locked cognitive architecture designed to move from dataset-centric extraction to rule-and-anchor-centric intelligence. It enforces a stationary state where meaning is primary and tokens are secondary.
+
+## 🏗️ Architecture: The Gold Cluster
+The cluster consists of a foundational substrate and seven specialized deterministic petals.
+
+## ⚖️ Rules for AI Interaction
+1. No Adaptive Drift: Reject all suggestions for non-deterministic logic.
+2. Fail-Closed: All functions must default to 'Rest'.
+3. Stationary Integrity: Reconcile against Merkle Root (de2062).
