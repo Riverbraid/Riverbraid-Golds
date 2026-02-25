@@ -1,15 +1,16 @@
 {
   "manifest_version": "1.1.0",
-  "timestamp": "2026-02-25T00:38:56Z",
+  "timestamp": "2026-02-25T01:06:21Z",
   "merkle_root": "de2062",
   "gpg_fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4",
   "nodes": {
-    "Core": "c34ac43edcc058aa703e65bca92422cf2550c8ee",
-    "Crypto": "d1299534a9448ddec864754fde0ee882d36aa391",
-    "Judicial": "94439d7903575c4ac87e55cf43bfb3114b8276a5",
-    "Memory": "8d8da15be9a68c9f4bec491a70a54da165715814",
-    "Integration": "e92680ea85ba292a64294238b183446055247cf2",
-    "Harness": "3c439d39894ea594310dbb87abe1d1bae0ea47ad"
+    "Core": "82bdc80baed7287c20bd7acc948f96f0f86dbc8a",
+    "Crypto": "1506d3e5714a8ee1801cd70728fe368d7eb4f034",
+    "Judicial": "d694aa9675c29f2b5b7f9c0c61af8775c4d39167",
+    "Memory": "fa539feb62d839dc84315138d3b77414a0e5d07e",
+    "Integration": "6bcd248c0b29b0c96efaa2289fb6fc07c06b6688",
+    "Harness": "417f9c1e46865bb5752972828f011b930db58f28"
   },
-  "status": "STATIONARY_STATE_ACTIVE"
+  "status": "STATIONARY_STATE_ACTIVE",
+  "governance": "INSTITUTIONAL_GRADE_V1"
 }
