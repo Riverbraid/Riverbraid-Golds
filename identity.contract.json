@@ -1,11 +1,10 @@
 {
-  "name": "Riverbraid-Core-Gold",
-  "role": "Frozen Core – Foundational Invariant Layer",
-  "signal": "DETERMINISTIC_REPRODUCIBILITY",
-  "version": "1.1",
-  "invariant": "Identical inputs → identical outputs. No external dependencies. 7-bit ASCII floor enforced.",
-  "RIVERBRAID_SECRET_REQUIREMENT": "Mandatory – missing or invalid aborts execution",
-  "anchor_date": "2026-02-24",
-  "gpg_fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4",
-  "merkle_root_reference": "de2062"
+  "contract_class": "IDENTITY_CONTRACT",
+  "version": "1.1.0",
+  "repo_name": "Riverbraid-Golds",
+  "repo_role": "HUB_COORDINATOR",
+  "invariants": { 
+    "entropy_ban": true, 
+    "ascii_only": true 
+  }
 }
