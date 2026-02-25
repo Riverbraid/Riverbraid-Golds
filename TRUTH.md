@@ -14,3 +14,7 @@ Meaning is primary. Tokens are secondary. The system scales in coherence, not ra
 
 ---
 *Verified Stationary State Baseline — 2026-02-25*
+
+## 4. Known Metadata Exceptions
+- **Riverbraid-Refusal-Gold**: Remote description gated by HTTP 403. Verified locally.
+- **Riverbraid-Safety-Gold**: Remote topics gated by HTTP 403. Verified locally.
