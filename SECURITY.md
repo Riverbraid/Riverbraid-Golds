@@ -1,5 +1,2 @@
 # Security Policy
-## Supported Versions
-Only the latest stationary release (V1.2) is supported.
-## Reporting a Vulnerability
-Report any entropy leaks or signal distortions via the Hub issue tracker with the tag [SECURITY].
+The Riverbraid Cluster operates on Mechanical Honesty. If you find a frequency distortion (vulnerability), please report it via GitHub Security Advisories. We aim for zero-entropy responses within 72 hours.
