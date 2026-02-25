@@ -14,5 +14,6 @@
     "deterministic": true,
     "no_entropy_sources": true,
     "schema_locked": true
-  }
+  },
+  "aperture_reference": "Riverbraid/riverbraid-cognition"
 }
