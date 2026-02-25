@@ -1,0 +1,17 @@
+{
+  "protocol": "Riverbraid-Gold-V1.1",
+  "authority": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4",
+  "allowed_petals": [
+    "Riverbraid-Core",
+    "Riverbraid-Crypto-Gold",
+    "Riverbraid-Judicial-Gold",
+    "Riverbraid-Memory-Gold",
+    "Riverbraid-Integration-Gold",
+    "Riverbraid-Harness-Gold"
+  ],
+  "invariants": {
+    "line_endings": "LF",
+    "encoding": "UTF-8-ASCII-SAFE",
+    "node_version": "20.11.0"
+  }
+}
