@@ -1,18 +1,26 @@
-# ⚓ Riverbraid-Golds: The Hub
+# ⚓ Riverbraid-Golds
 
-This is the **Master Authority** for the Riverbraid Gold Cluster. It holds the `STATIONARY_MANIFEST.json` which maps the immutable state of all 7 petals.
+## 📜 Overview
+**Riverbraid-Golds** is the master hub and manifest authority for the Riverbraid Gold Cluster. 
 
-## 🌻 The 7 Petals of the Braid
-1.  **Riverbraid-Core**: Foundational primitives.
-2.  **Riverbraid-Golds**: This Hub (Manifest Authority).
-3.  **Riverbraid-Crypto-Gold**: Cryptographic anchor (SHA-256).
-4.  **Riverbraid-Judicial-Gold**: Rule-centric policy enforcement.
-5.  **Riverbraid-Memory-Gold**: Stationary state persistence.
-6.  **Riverbraid-Integration-Gold**: Semantic bridging.
-7.  **Riverbraid-Harness-Gold**: The Verification Harness.
+It operates within the **Riverbraid Gold Cluster** under a **Fail-Closed** discipline: if any part of the system deviates from its anchored frequency (commit hash), the cluster halts to prevent entropy leakage.
 
-## 📜 Global Directions
-To verify the cluster, pull all repositories and run the `harness` audit. If the Merkle Root does not resolve to `de2062`, the cluster is compromised.
+## 🗝️ Core Functions
+* Manifest Authority
+* Node Mapping
+* Cluster Coordination
+* **Institutional Alignment:** Fully compliant with the v1.1.0 stationary mandate.
+
+## 🧬 Stationary State Invariant
+The system is anchored in the principle of $dS/dt = 0$ (Zero Entropy Growth).
+> "A system is secure if and only if it is in a secure state and all state transitions preserve security." — McLean (1994)
+
+## 🛡️ Governance
+This petal is a part of the **Riverbraid Gold v1.1.0** release.
+* **Merkle Root:** `de2062`
+* **Fingerprint:** `D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4`
+* **Status:** STATIONARY_STATE_ACTIVE
+* **License:** MIT
 
 ---
-**Status:** SEALED V1.1.0
+*Signed by the Honest Advisor Protocol.*
