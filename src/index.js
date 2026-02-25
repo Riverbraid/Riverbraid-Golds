@@ -22,6 +22,5 @@ const enforceFrozenCore = (secret) => {
 module.exports = { enforceFrozenCore };
 
 if (require.main === module) {
-  const secret = process.env.RIVERBRAID_SECRET;
   console.log(JSON.stringify(enforceFrozenCore(secret), null, 2));
 }

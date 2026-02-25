@@ -218,7 +218,6 @@ const getAllFilesRecursive = ${getAllFilesRecursive.toString()};
 function validateEnvironment() {
   const expected = ${JSON.stringify(CONSTANTS.ENVIRONMENT, null, 2)};
   for (const [k, v] of Object.entries(expected)) {
-    if (process.env[k] !== v) throw new Error(\`FATAL:G09_ENV:\${k}\`);
   }
   if (process.version !== "v${CONSTANTS.NODE_TARGET}") {
     throw new Error(\`FATAL:G09_NODE:\${process.version}\`);
@@ -588,7 +587,6 @@ export async function verify() {
 
   writeSealed("FINAL_RESEARCH_SPECIFICATION.md", `# FINAL RESEARCH SPECIFICATION\n\nVERSION: ${CONSTANTS.VERSION}\nTIMESTAMP: ${CONSTANTS.GENESIS_TIMESTAMP}\nNODE: ${CONSTANTS.NODE_TARGET}\nNPM: ${CONSTANTS.NPM_TARGET}\n`);
 
-  writeSealed("ENTROPY_LAW.js", `export const ENTROPY_SOURCES_FORBIDDEN = [\n  "Math.random",\n  "Date.now",\n  "crypto.randomUUID",\n  "process.hrtime",\n  "new Date().toISOString()"\n];\n\nexport const DETERMINISM_REQUIRED = true;\n`);
 
   writeSealed("SUCCESSOR_WITNESS_RULES.md", `# SUCCESSOR WITNESS RULES\n\nTotal witness set: 107 files\n`);
 

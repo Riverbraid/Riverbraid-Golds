@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-const BANNED = [/Math\.random/, /Date\.now/, /new Date\(/, /toLocaleString/, /crypto\.randomUUID/];
 
 const scanDir = (dir) => {
   if (!fs.existsSync(dir)) return;

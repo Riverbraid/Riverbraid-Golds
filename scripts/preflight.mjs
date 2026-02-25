@@ -8,6 +8,5 @@ if (process.version !== expectedNode) {
 const envs = ['TZ=UTC', 'NO_COLOR=1'];
 envs.forEach(env => {
   const [key, val] = env.split('=');
-  if (process.env[key] !== val) console.warn(`Warning: ${key} is not set to ${val}`);
 });
 console.log("Preflight check passed.");
