@@ -1,8 +1,8 @@
-# McLean (2026) Primary Coherence Anchor
-
 # Riverbraid Golds
 ## Authority Hub and Cluster Manifest
 This repository serves as the central specification and truth anchor for the Riverbraid Gold Cluster.
+
+# McLean (2026) Primary Coherence Anchor
 
 ### Verification
 Execute the deterministic invariant check:
