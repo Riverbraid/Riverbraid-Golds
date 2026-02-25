@@ -13,6 +13,10 @@
 | **Integration-Gold** | 49d438744f56fcd36d769811b02aa9ce93a561af2296842e22b06fe9c664aa27 |
 | **Judicial-Gold** | 5366c63925aa57108b1fb16d69b5238c381e439dd8fe2aa3fa8ae3b961870893 |
 
+| **Crypto-Gold** | f70d1b88835d7acd5e6ff882313cc66bcc4868359edd0e4b0e21047abc6b5dfa |
+| **Memory-Gold** | 04e962eb78ed7331264d8861a5a42e0f34db581ac76f069ad6b6bd8480c1745d |
+| **Refusal-Gold** | 015dd73d49e38fdfe32609d4446fddbb30df1c0d1f847dac064138a4e5d246f2 |
+| **Safety-Gold** | a558cb15741a58c6846ba9206b323ea634697a245f072b2b6e4197966d7a647e |
 ## State Invariant
 $$dS/dt = 0$$
 
