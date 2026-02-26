@@ -9,7 +9,7 @@
       "governed_files": [
         "identity.contract.json",
         "LICENSE",
-        "src/index.mjs"
+        "src/index.js"
       ],
       "invariants": [
         "Determinism",

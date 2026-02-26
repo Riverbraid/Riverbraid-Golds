@@ -1,19 +1,8 @@
 {
-  "contract_class": "riverbraid-reference",
+  "contract_class": "RIVERBRAID_GOLDS",
   "version": "1.1.0",
   "repo_name": "Riverbraid-Golds",
-  "repo_role": "stationary-core-anchor",
-  "governed_files": [
-    "README.md",
-    "package.json",
-    "identity.contract.json",
-    "LICENSE",
-    "index.js"
-  ],
-  "invariants": {
-    "deterministic": true,
-    "no_entropy_sources": true,
-    "schema_locked": true
-  },
-  "aperture_reference": "Riverbraid/riverbraid-cognition"
+  "repo_role": "Cluster anchor + gates",
+  "invariants": ["MERKLE_MATCH", "NO_ENTROPY", "FAIL_CLOSED"],
+  "governed_files": ["verify.mjs", "GOLD_CLUSTER.manifest.json", "identity.contract.json"]
 }
