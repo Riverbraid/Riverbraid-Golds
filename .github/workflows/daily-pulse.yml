@@ -1,0 +1,13 @@
+name: Daily Alignment Pulse
+on:
+  schedule:
+    - cron: '0 14 * * *' # 9:00 AM EST
+  workflow_dispatch:
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Heartbeat
+        run: node tests/heartbeat.mjs
