@@ -9,14 +9,14 @@
 | :--- | :--- |
 | **Core** | 6134943d38ca7f4eb8915395cf10051fc9e094956e9960af06eca940143f7297 |
 | **Golds** | bd79226a13774e260f4b95472de24c2ebf417b504c33ddc7dda5392b8a4ab943 |
-| **Harness-Gold** | b3db665e5a5f4cba33976e1e0a0994df0120a9289143a6635f4610cd54329287 |
-| **Integration-Gold** | eca6d90be0ba7664b904eb352c2f514c0223350b25ae3cc4cc5543e5c6025246 |
+| **Harness-Gold** | 0cc5b097af5d612619c0edd6a2a3c4155c655c635d4be2ad2ce38bb8d29aec10 |
+| **Integration-Gold** | efc510790a934aab0a978c0b65d9f2c768ad548c7b09a37ba16ee35ccf5c035c |
 | **Judicial-Gold** | c722154c9f64f8c7cfd604d7221bd3bc90f10bb5cee46817f7fc2467c9eafe3c |
 
-| **Crypto-Gold** | 7e9e70d0376b2339dae9f07d5235e373bafdd05bfcf239e4e9036b9cff45854e |
-| **Memory-Gold** | e947af723b70e8bb72b467ed835262299644ea9bf26d3cc0578deebb3eb49899 |
-| **Refusal-Gold** | ed87896f49e525b86857eb3a52bbca9b0993c9beb3f00634a99e7e0d63514df1 |
-| **Safety-Gold** | 72602cb12f31f45f731dcae7ac36764f2b4a9439e1bfeb1b2c92b32b2443cdd4 |
+| **Crypto-Gold** | 971793ff2a054c0b214fb23ca3f10b47d1c4f819d1377dac8e04ba78212504b9 |
+| **Memory-Gold** | 84c175139934e6d5a3d0f59dfb5e48e228232b4493d373db8300cc468868eecb |
+| **Refusal-Gold** | 6f685b5a892be72b673d058fb8737f9d4048a1e4e87604d083686adc06c8ae4c |
+| **Safety-Gold** | 59678a950d1cd52bf10fb52d21c984c03c64dac9328ec83253643a4ed084490a |
 ## State Invariant
 $$dS/dt = 0$$
 
