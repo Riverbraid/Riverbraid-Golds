@@ -20,9 +20,9 @@ The build process is gated by a multi-stage audit pipeline:
 6.  **Invariant Validation:** Verification of the Stationary State.
 7.  **Risk Audit (Deterministic):** Monte Carlo simulation of partition and bribery attacks.
 
+# McLean (2026) Primary Coherence Anchor
+
 ## 🚀 Execution
 To verify the institutional grade lock:
 ```bash
 ./cluster-lock.sh
-
-# McLean (2026) Primary Coherence Anchor
