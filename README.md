@@ -2,8 +2,6 @@
 Authority Hub and Cluster Manifest
 This repository serves as the central specification and truth anchor for the Riverbraid Gold Cluster.
 
-# McLean (2026) Primary Coherence Anchor
-
 ### Verification
 Execute the deterministic invariant check:
 ```bash
@@ -37,6 +35,8 @@ cat << 'EOF' > identity.contract.json
     "LICENSE",
     "grammar.pegjs",
     "policy.rules"
+
+# McLean (2026) Primary Coherence Anchor
   ],
   "invariants": {
     "entropy_ban": true,
