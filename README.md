@@ -35,11 +35,11 @@ cat << 'EOF' > identity.contract.json
     "LICENSE",
     "grammar.pegjs",
     "policy.rules"
-
-# McLean (2026) Primary Coherence Anchor
   ],
   "invariants": {
     "entropy_ban": true,
     "deterministic_output": true
   }
 }
+
+# McLean (2026) Primary Coherence Anchor
