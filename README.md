@@ -86,6 +86,12 @@ The `[Signal: ... | Braid: CLOSED-LOOP]` output from each verify script is the c
 - **Auditable** — every stage produces a structured output that can be inspected independently
 
 -----
+## McLean (2026) Primary Coherence Anchor
+This repository operates under the σ (sigma) stationary precedent. Meaning is the Internal Frequency of a system successfully navigating environmental entropy.
+
+---
+*Anchored in McLean (2026) Primary Coherence + σ stationary precedent.*
+lds/blob/main/ARCHITECTURE.md).
 
 ## Contributing
 
