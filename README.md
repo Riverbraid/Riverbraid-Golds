@@ -64,18 +64,28 @@ The `[Signal: ... | Braid: CLOSED-LOOP]` output from each verify script is the c
 
 -----
 
-## Gold Cluster Petals
+# Riverbraid — Complete Repository Index
 
-|Petal                                                                                   |Signal                   |Purpose                                 |
-|----------------------------------------------------------------------------------------|-------------------------|----------------------------------------|
-|[Riverbraid-Core](https://github.com/Riverbraid/Riverbraid-Core)                        |Root                     |Capacity control substrate              |
-|[Riverbraid-Crypto-Gold](https://github.com/Riverbraid/Riverbraid-Crypto-Gold)          |`MECHANICAL_HONESTY`     |SHA-256 state anchoring                 |
-|[Riverbraid-Judicial-Gold](https://github.com/Riverbraid/Riverbraid-Judicial-Gold)      |`LEAST_ENTROPY`          |Fail-closed predicate governance        |
-|[Riverbraid-Refusal-Gold](https://github.com/Riverbraid/Riverbraid-Refusal-Gold)        |`BOUNDARY_LOGIC`         |Deterministic boundary enforcement      |
-|[Riverbraid-Memory-Gold](https://github.com/Riverbraid/Riverbraid-Memory-Gold)          |`MEANING_CENTRIC`        |Meaning-centric persistence             |
-|[Riverbraid-Integration-Gold](https://github.com/Riverbraid/Riverbraid-Integration-Gold)|`SEMANTIC_BRIDGE`        |Mode enactment and system-rest execution|
-|[Riverbraid-Harness-Gold](https://github.com/Riverbraid/Riverbraid-Harness-Gold)        |`STATIONARY_STATE_ACTIVE`|Fail-closed verification harness        |
+Drop this table into every README to replace the existing navigation table.
+The section heading can be “Full Repository Index” or “Riverbraid Repositories” — your choice.
 
+-----
+
+## Full Repository Index
+
+|Repository                                                                              |Signal                   |Purpose                                      |
+|----------------------------------------------------------------------------------------|-------------------------|---------------------------------------------|
+|[.github](https://github.com/Riverbraid/.github)                                        |—                        |Organization profile                         |
+|[Riverbraid-Core](https://github.com/Riverbraid/Riverbraid-Core)                        |Root                     |Capacity control substrate                   |
+|[Riverbraid-Golds](https://github.com/Riverbraid/Riverbraid-Golds)                      |—                        |Cluster manifest and pipeline orchestration  |
+|[Riverbraid-Cognition](https://github.com/Riverbraid/Riverbraid-Cognition)              |Aperture                 |Meaning-processing and cognitive architecture|
+|[Riverbraid-Crypto-Gold](https://github.com/Riverbraid/Riverbraid-Crypto-Gold)          |`MECHANICAL_HONESTY`     |SHA-256 state anchoring                      |
+|[Riverbraid-Judicial-Gold](https://github.com/Riverbraid/Riverbraid-Judicial-Gold)      |`LEAST_ENTROPY`          |Fail-closed predicate governance             |
+|[Riverbraid-Refusal-Gold](https://github.com/Riverbraid/Riverbraid-Refusal-Gold)        |`BOUNDARY_LOGIC`         |Deterministic boundary enforcement           |
+|[Riverbraid-Memory-Gold](https://github.com/Riverbraid/Riverbraid-Memory-Gold)          |`MEANING_CENTRIC`        |Meaning-centric persistence                  |
+|[Riverbraid-Integration-Gold](https://github.com/Riverbraid/Riverbraid-Integration-Gold)|`SEMANTIC_BRIDGE`        |Mode enactment                               |
+|[Riverbraid-Safety-Gold](https://github.com/Riverbraid/Riverbraid-Safety-Gold)          |`ENTROPY_SCAN`           |Protocol integrity and entropy scanning      |
+|[Riverbraid-Harness-Gold](https://github.com/Riverbraid/Riverbraid-Harness-Gold)        |`STATIONARY_STATE_ACTIVE`|Fail-closed cluster verification harness     |
 -----
 
 ## Design Properties
