@@ -1,25 +1,13 @@
 #!/bin/bash
-set -euo pipefail
-export TZ=UTC LC_ALL=C LANG=C NO_COLOR=1
-echo "--- CLUSTER VERIFICATION: MULTI-PETAL SCAN ---"
-
-# Root path for Codespaces
-BASE_DIR="/workspaces"
-
-# Verification targets
-PETALS=("Riverbraid-Core" "Riverbraid-Crypto-Gold" "Riverbraid-Memory-Gold" "Riverbraid-Harness-Gold-Gold")
-
-for repo in "${PETALS[@]}"; do
-  if [ -d "$BASE_DIR/$repo" ]; then
-    echo "🔍 Scanning $repo..."
-    if [ -f "$BASE_DIR/$repo/identity.contract.json" ]; then
-      echo "   ✓ Identity Contract Found"
-    else
-      echo "   ! MISSING Identity Contract"
-    fi
-  else
-    echo "   × $repo directory not found in $BASE_DIR"
-  fi
+set -e
+GOLDS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CLUSTER_ROOT="$(dirname "$GOLDS_DIR")"
+echo "Running Riverbraid Gold Cluster verification..."
+PETALS=("Riverbraid-Core" "Riverbraid-Cognition" "Riverbraid-Crypto-Gold" "Riverbraid-Judicial-Gold" "Riverbraid-Refusal-Gold" "Riverbraid-Memory-Gold" "Riverbraid-Integration-Gold" "Riverbraid-Safety-Gold" "Riverbraid-Harness-Gold")
+for petal in "${PETALS[@]}"; do
+    if [ ! -d "$CLUSTER_ROOT/$petal" ]; then echo "ERROR: Missing petal directory: $petal"; exit 1; fi
+    if [ ! -f "$CLUSTER_ROOT/$petal/identity.contract.json" ]; then echo "ERROR: $petal missing identity.contract.json"; exit 1; fi
 done
-
-echo "--- SCAN COMPLETE ---"
+cd "$GOLDS_DIR"
+python3 build.py
+echo "Verification complete: STATIONARY"

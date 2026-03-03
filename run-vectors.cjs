@@ -1,23 +1,16 @@
-/**
- * Absolute V2 Standard Scanner
- * Enforces entropy bans across executable code paths.
- */
+#!/usr/bin/env node
+const { execSync } = require('child_process');
 const fs = require('fs');
-
-const hygiene = () => {
-    console.log("🧹 Running Hygiene: Checking for illicit entropy...");
-    // Logic to scan for banned predicate patterns
-    return true;
+console.log('Running Hygiene...');
+try { execSync('python3 gate2_byte_audit.py', { stdio: 'inherit' }); } catch (e) { process.exit(1); }
+console.log('Running Entropy Scan...');
+try { execSync('python3 gate3_entropy_scan.py', { stdio: 'inherit' }); } catch (e) { process.exit(1); }
+const vectors = {
+  timestamp: new Date().toISOString(),
+  version: '1.2.0',
+  hygiene: 'PASS',
+  entropy_scan: 'PASS',
+  petals: ['Riverbraid-Core','Riverbraid-Cognition','Riverbraid-Crypto-Gold','Riverbraid-Judicial-Gold','Riverbraid-Refusal-Gold','Riverbraid-Memory-Gold','Riverbraid-Integration-Gold','Riverbraid-Safety-Gold','Riverbraid-Harness-Gold']
 };
-
-const build = () => {
-    console.log("🏗 Building Vectors: Assembling Gold Cluster...");
-    return true;
-};
-
-if (hygiene() && build()) {
-    console.log("✅ Absolute V2: Vectors Ready.");
-    process.exit(0);
-} else {
-    process.exit(1);
-}
+fs.writeFileSync('vectors.json', JSON.stringify(vectors, null, 2));
+console.log('Vectors written to vectors.json');
