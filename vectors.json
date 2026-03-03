@@ -1,17 +1,17 @@
 {
-  "status": "STATIONARY",
-  "cluster_merkle_root": "120c59f07595b85712a1487e74eaafd7f23a8e0827c113f24386385216ecd8b1",
-  "petals": {
-    "Riverbraid": "880e9b3ee49c28ec0eb06a1b886c628e8dc796567f1889ca76254607127e20e2",
-    "Riverbraid-Refusal-Gold": "c8664aa558687a636165d2b2115b007c6c63f67661ea8551ec8a02f6b7d3dd0f",
-    "Riverbraid-Crypto-Gold": "cebcaa89bda5d5f631fe5e4bd736ba088598609bbebe6109ac31b3aee7cfb718",
-    "Riverbraid-Core": "e515a60f59e7decd0e86743a3d12109187efc6755f9acc18e98f9b2ea87fb92f",
-    "Riverbraid-Safety-Gold": "c8664aa558687a636165d2b2115b007c6c63f67661ea8551ec8a02f6b7d3dd0f",
-    "Riverbraid-Cognition": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-    "Riverbraid-Harness-Gold": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-    "Riverbraid-Memory-Gold": "c8664aa558687a636165d2b2115b007c6c63f67661ea8551ec8a02f6b7d3dd0f",
-    "Riverbraid-Golds": "8e69d69fa40f9e93105f849211b22cc5b48f464c0ede4072eef65940ff8b7881",
-    "Riverbraid-Judicial-Gold": "61553afeef9a5b20b570a60289f6b7eededb62931c0120cd7bbe3842940444a0",
-    "Riverbraid-Integration-Gold": "ed6f8f8274ffc55d63e82a7e9d672a2ce993185cf8dd8f5fde30477ce8d44aba"
-  }
+  "timestamp": "2026-03-03T06:05:30.069Z",
+  "version": "1.2.0",
+  "hygiene": "PASS",
+  "entropy_scan": "PASS",
+  "petals": [
+    "Riverbraid-Core",
+    "Riverbraid-Cognition",
+    "Riverbraid-Crypto-Gold",
+    "Riverbraid-Judicial-Gold",
+    "Riverbraid-Refusal-Gold",
+    "Riverbraid-Memory-Gold",
+    "Riverbraid-Integration-Gold",
+    "Riverbraid-Safety-Gold",
+    "Riverbraid-Harness-Gold"
+  ]
 }
