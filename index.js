@@ -1,3 +1,4 @@
+// Sovereign Reference Index – Riverbraid-Golds v1.2.0
 const { execSync } = require('child_process');
 const fs = require('fs');
 
