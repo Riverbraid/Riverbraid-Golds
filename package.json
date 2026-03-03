@@ -1,17 +1,13 @@
 {
   "name": "riverbraid-golds",
-  "version": "1.2.0",
-  "description": "Cluster manifest and Absolute V2 pipeline orchestration",
-  "main": "index.js",
+  "version": "1.3.0",
+  "description": "Stationary State Orchestrator",
   "scripts": {
-    "verify": "node verify.mjs",
-    "build": "python3 build.py",
-    "vectors": "node run-vectors.cjs"
+    "verify": "node braid-sync.js",
+    "seal": "node run-vectors.cjs",
+    "anchor": "python3 generate_merkle_root.py"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Riverbraid/Riverbraid-Golds.git"
-  },
-  "author": "Riverbraid",
-  "license": "MIT"
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
 }

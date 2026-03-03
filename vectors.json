@@ -1,16 +1,8 @@
 {
-  "version": "1.2.0",
-  "merkle_root": "4688f69434179635439b74d0090a645d9785033e3c8212368606d20b1687b243",
-  "petals": [
-    "Riverbraid-Core",
-    "Riverbraid-Cognition",
-    "Riverbraid-Crypto-Gold",
-    "Riverbraid-Judicial-Gold",
-    "Riverbraid-Refusal-Gold",
-    "Riverbraid-Memory-Gold",
-    "Riverbraid-Integration-Gold",
-    "Riverbraid-Safety-Gold",
-    "Riverbraid-Harness-Gold",
-    "Riverbraid-Temporal-Gold"
-  ]
+  "version": "1.3.0",
+  "status": "STATIONARY",
+  "gates": {
+    "hygiene": "PASS",
+    "entropy": "PASS"
+  }
 }
