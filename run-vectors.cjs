@@ -23,14 +23,13 @@ console.log('Building Vectors...');
 const vectors = {
   timestamp: new Date().toISOString(),
   version: '1.2.0',
-  hygiene: 'PASS',
-  entropy_scan: 'PASS',
+  gates: { hygiene: 'PASS', entropy_scan: 'PASS' },
   petals: [
     'Riverbraid-Core', 'Riverbraid-Cognition', 'Riverbraid-Crypto-Gold',
     'Riverbraid-Judicial-Gold', 'Riverbraid-Refusal-Gold', 'Riverbraid-Memory-Gold',
-    'Riverbraid-Integration-Gold', 'Riverbraid-Safety-Gold', 'Riverbraid-Harness-Gold'
+    'Riverbraid-Integration-Gold', 'Riverbraid-Safety-Gold', 'Riverbraid-Harness-Gold',
+    'Riverbraid-Temporal-Gold'
   ]
 };
-
 fs.writeFileSync('vectors.json', JSON.stringify(vectors, null, 2));
 console.log('Vectors written to vectors.json');

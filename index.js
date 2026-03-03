@@ -9,7 +9,11 @@ function runPipeline() {
 
 function getClusterStatus() {
   if (fs.existsSync('vectors.json')) {
-    return JSON.parse(fs.readFileSync('vectors.json', 'utf8'));
+    try {
+      return JSON.parse(fs.readFileSync('vectors.json', 'utf8'));
+    } catch (e) {
+      return { status: 'ERROR', message: 'Failed to parse vectors.json' };
+    }
   }
   return { status: 'UNKNOWN', message: 'vectors.json not found' };
 }
@@ -19,7 +23,4 @@ function runVectors() {
 }
 
 module.exports = { runPipeline, getClusterStatus, runVectors };
-
-if (require.main === module) {
-  runPipeline();
-}
+if (require.main === module) { runPipeline(); }
