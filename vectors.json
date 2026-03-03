@@ -1,11 +1,16 @@
 {
   "version": "1.2.0",
-  "merkle_root": "dfcf8b88f3be99f8616d3f5ef1784ee6abfa2557d97a06ffd698790aae19a17b",
+  "merkle_root": "4688f69434179635439b74d0090a645d9785033e3c8212368606d20b1687b243",
   "petals": [
-    "integration-gold",
-    "memory-gold",
-    "judicial-gold",
-    "crypto-gold",
-    "Riverbraid-Golds"
+    "Riverbraid-Core",
+    "Riverbraid-Cognition",
+    "Riverbraid-Crypto-Gold",
+    "Riverbraid-Judicial-Gold",
+    "Riverbraid-Refusal-Gold",
+    "Riverbraid-Memory-Gold",
+    "Riverbraid-Integration-Gold",
+    "Riverbraid-Safety-Gold",
+    "Riverbraid-Harness-Gold",
+    "Riverbraid-Temporal-Gold"
   ]
 }

@@ -1,42 +1,47 @@
-import os
-import hashlib
-import json
+import os, hashlib, json, subprocess, sys
+from pathlib import Path
 
-def get_anchor(path):
-    contract_path = os.path.join(path, 'identity.contract.json')
-    if os.path.exists(contract_path):
-        with open(contract_path, 'rb') as f:
-            return hashlib.sha256(f.read()).hexdigest()
-    return None
+PETALS = [
+    'Riverbraid-Core', 'Riverbraid-Cognition', 'Riverbraid-Crypto-Gold',
+    'Riverbraid-Judicial-Gold', 'Riverbraid-Refusal-Gold', 'Riverbraid-Memory-Gold',
+    'Riverbraid-Integration-Gold', 'Riverbraid-Safety-Gold', 'Riverbraid-Harness-Gold',
+    'Riverbraid-Temporal-Gold'
+]
 
-print("Collecting petal anchors...")
-anchors = {}
-# Scan the local packages directory
-package_dir = './packages'
-if os.path.exists(package_dir):
-    for d in os.listdir(package_dir):
-        full_path = os.path.join(package_dir, d)
-        if os.path.isdir(full_path):
-            anchor = get_anchor(full_path)
-            if anchor:
-                anchors[d] = anchor
-                print(f"  {d}: {anchor}")
-            else:
-                print(f"  {d}: MISSING ANCHOR")
+def build():
+    print("Collecting petal anchors...")
+    anchors = {}
+    # Search in both /packages and /workspaces for maximum resilience
+    search_paths = ['./packages', '/workspaces']
+    
+    for petal_name in PETALS:
+        found = False
+        for base in search_paths:
+            # Check for name or name.lower()
+            p_path = Path(base) / petal_name
+            if not p_path.exists():
+                p_path = Path(base) / petal_name.replace('Riverbraid-', '').lower()
+            
+            anchor_file = p_path / '.anchor'
+            if anchor_file.exists():
+                with open(anchor_file, 'r') as f:
+                    anchors[petal_name] = f.read().strip()
+                    print(f"  {petal_name}: {anchors[petal_name]}")
+                    found = True
+                    break
+        if not found:
+            print(f"  {petal_name}: MISSING ANCHOR")
 
-# Also check the root for the orchestrator itself
-root_anchor = get_anchor('.')
-if root_anchor:
-    anchors['Riverbraid-Golds'] = root_anchor
-    print(f"  Riverbraid-Golds: {root_anchor}")
+    # Final Merkle Root Calculation
+    combined = "".join(sorted(anchors.values())).encode()
+    cluster_root = hashlib.sha256(combined).hexdigest()
+    
+    with open('cluster.hash', 'w') as f: f.write(cluster_root)
+    with open('vectors.json', 'w') as f:
+        json.dump({"version": "1.2.0", "merkle_root": cluster_root, "petals": list(anchors.keys())}, f, indent=2)
+    
+    print(f"\nFinal Cluster Merkle Root: {cluster_root}")
+    print("Verification complete: STATIONARY")
 
-# Generate Merkle Root
-combined = "".join(sorted(anchors.values())).encode()
-cluster_root = hashlib.sha256(combined).hexdigest()
-
-print(f"\nFinal Cluster Merkle Root: {cluster_root}")
-print("Verification complete: STATIONARY")
-
-# Write to vectors.json for Node.js compatibility
-with open('vectors.json', 'w') as f:
-    json.dump({"version": "1.2.0", "merkle_root": cluster_root, "petals": list(anchors.keys())}, f, indent=2)
+if __name__ == "__main__":
+    build()

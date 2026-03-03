@@ -1,0 +1,6 @@
+[
+  {"step": 1, "action": "Load current logical clock from logical_clock.state"},
+  {"step": 2, "action": "On tick(), increment clock and save new value"},
+  {"step": 3, "action": "On current_time(), return clock without incrementing"},
+  {"step": 4, "action": "Fail-closed if state file is corrupted or unreadable"}
+]
