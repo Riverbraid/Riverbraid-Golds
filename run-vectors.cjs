@@ -20,7 +20,6 @@ try {
 
 console.log('Building Vectors...');
 const vectors = {
-  timestamp: new Date().toISOString(),
   version: '1.2.0',
   gates: { hygiene: 'PASS', entropy_scan: 'PASS' },
   petals: [
