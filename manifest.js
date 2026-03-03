@@ -10,5 +10,6 @@ module.exports = {
     'Riverbraid-Integration-Gold', 'Riverbraid-Safety-Gold', 'Riverbraid-Harness-Gold',
     'Riverbraid-Temporal-Gold'
   ],
-  stationary_invariant: 'Aggregate Merkle root of all petal anchors'
+  stationary_invariant: 'Aggregate Merkle root of all petal anchors',
+  governance: 'Dual signature required for changes'
 };
