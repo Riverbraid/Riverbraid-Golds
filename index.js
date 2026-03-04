@@ -1,14 +1,18 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
 function runPipeline() {
-  execSync('python3 build.py', { stdio: 'inherit' });
+  execSync('node run-vectors.cjs', { stdio: 'inherit', cwd: __dirname });
 }
 
 function getStatus() {
-  return fs.existsSync('vectors.json') 
-    ? JSON.parse(fs.readFileSync('vectors.json', 'utf8'))
-    : { status: 'UNKNOWN' };
+  const vectorsPath = path.join(__dirname, 'vectors.json');
+  if (fs.existsSync(vectorsPath)) {
+    try { return JSON.parse(fs.readFileSync(vectorsPath, 'utf8')); }
+    catch { return { status: 'CORRUPT' }; }
+  }
+  return { status: 'UNKNOWN', reason: 'pipeline has not run' };
 }
 
 module.exports = { runPipeline, getStatus };
