@@ -1,0 +1,77 @@
+{
+  "sha256": "1979a0f7aa249ebe6e6be21d0b7e41dde2b40e397c5bac71176fb0aa63f5fcfb",
+  "files": [
+    {
+      "file": ".gitignore",
+      "hash": "89b9c7309176d698bf421c11e5860c6a9fcaa4095b9a6695e123604fc21c9e33"
+    },
+    {
+      "file": "PROOFS/v1.5.0_resonance_proof.json",
+      "hash": "d164b0160cbbcfe8d134cda0c12f4093e51d92ae05314cd87fdcb40cfc917ec5"
+    },
+    {
+      "file": "PROOFS/v1.5.0_resonance_proof.json.asc",
+      "hash": "da8e98ec69b56841a27ca7382affb12a4a02884256e91df9de29b6c59f7dc4d5"
+    },
+    {
+      "file": "README.md",
+      "hash": "99dfeff8b54d4eb1193c1d7e7a1e86091b10674a73e1821453346c688bd051e9"
+    },
+    {
+      "file": "bin/gate.mjs",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "bin/heartbeat.mjs",
+      "hash": "c0bc8656b364ee5d0535aa09c6fc959c8ea8b0dadfbd7571ad1b2ddab772fe31"
+    },
+    {
+      "file": "bin/run-vectors.cjs",
+      "hash": "8e4bb628e831e04c0e2816dc12fd529b525a8de5923ce2e1ff9f1b2f7d9c501a"
+    },
+    {
+      "file": "constitutional/DURABILITY.md",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "constitutional/LAYER-INVARIANTS.md",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "constitutional/NEUTRAL-LAYERS.md",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "constitutional/RESILIENCE.md",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "constitutional/SCOPE.md",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "constitutional/SEAL-RECORD.md",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "constitutional/SURVIVABILITY.md",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "gate.mjs",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "heartbeat.mjs",
+      "hash": "c0bc8656b364ee5d0535aa09c6fc959c8ea8b0dadfbd7571ad1b2ddab772fe31"
+    },
+    {
+      "file": "package.json",
+      "hash": "fc966d8747752cab085fbdc46115f23cfa43e4f87ea24ff87e8fcf0019014b13"
+    },
+    {
+      "file": "run-vectors.cjs",
+      "hash": "0918f7b1142d021aefafa973a1cd7dd4f881df27636b00d2d0b53379ac245c07"
+    }
+  ]
+}
