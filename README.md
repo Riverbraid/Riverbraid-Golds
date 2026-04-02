@@ -21,3 +21,10 @@ The integrity of this repository can be verified using the signed proof in `PROO
 
 ---
 *This repository is a node in the Riverbraid Cluster. Its state is governed by its internal invariants, independent of steward intent.*
+
+---
+## Riverbraid Ecosystem
+- **Core Framework**: [Riverbraid-Core](https://github.com/Riverbraid/Riverbraid-Core)
+- **Ecosystem Index**: [Riverbraid-Manifest-Gold](https://github.com/Riverbraid/Riverbraid-Manifest-Gold)
+
+## Keywords
