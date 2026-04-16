@@ -1,0 +1,23 @@
+name: Riverbraid-Integrity-Guard
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Verify Truth Seal
+        run: |
+          if [ -f TRUTH.SEAL ]; then
+            sha256sum -c --quiet TRUTH.SEAL
+            echo "✅ Integrity Verified."
+          else
+            echo "❌ TRUTH.SEAL Missing."
+            exit 1
+          fi
