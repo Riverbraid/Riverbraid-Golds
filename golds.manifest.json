@@ -1,15 +1,30 @@
 {
   "version": "1.5.0",
   "stationary_root": "de20625f9b8c7d1e8ec84f6d8f86d9f4f2b083a4",
+  "workspace_root": "/workspaces",
   "registry": [
     "Riverbraid-Core",
     "Riverbraid-Golds",
     "Riverbraid-Crypto-Gold",
     "Riverbraid-Judicial-Gold",
     "Riverbraid-Memory-Gold",
+    "Riverbraid-Integration-Gold",
+    "Riverbraid-Refusal-Gold",
+    "Riverbraid-Cognition",
+    "Riverbraid-Harness-Gold",
+    "Riverbraid-Temporal-Gold",
+    "Riverbraid-Action-Gold",
+    "Riverbraid-Audio-Gold",
+    "Riverbraid-Vision-Gold",
+    "Riverbraid-Lite",
+    "Riverbraid-Interface-Gold",
+    "Riverbraid-Manifest-Gold",
+    "Riverbraid-GPG-Gold",
+    "Riverbraid-Safety-Gold",
     "Riverbraid-p5",
     "Riverbraid-Hydra",
     "Riverbraid-Lang",
-    "riverbraid-ssg"
+    "riverbraid-ssg",
+    ".github"
   ]
 }
