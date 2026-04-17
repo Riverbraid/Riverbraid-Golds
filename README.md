@@ -1,7 +1,12 @@
 # Riverbraid-Golds
+**Registry Status: Stationary v1.5.0**
 
----
-## Part of the Riverbraid Constellation
-A self-verifying integrity substrate anchored to stationary Merkle root **de2062** (Sovereign layer **adef13**).
-Verification: `node run-vectors.cjs verify`
+## Constellation Governance
+All repositories have been normalized to the \`main\` branch. 
+The Global Merkle Root is anchored to the Riverbraid-Core Stationary State.
 
+## Verification
+To run a total cluster audit:
+\`\`\`bash
+./verify-all.sh
+\`\`\`
