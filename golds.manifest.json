@@ -1,0 +1,10 @@
+{
+  "version": "1.5.0",
+  "stationary_root": "de20625f9b8c7d1e8ec84f6d8f86d9f4f2b083a4",
+  "registry": [
+    "Riverbraid-Core",
+    "Riverbraid-Crypto-Gold",
+    "Riverbraid-Judicial-Gold",
+    "Riverbraid-Memory-Gold"
+  ]
+}
