@@ -1,6 +1,6 @@
 ]633;E;for repo in $(jq -r '.nodes[]' FINAL_REGISTRY.json);57b4f881-bfe4-40a3-b6ab-dc7a222b306f]633;CRiverbraid-Core: 7b12d6
 Riverbraid-Crypto-Gold: dedb7f
-Riverbraid-Safety-Gold: a155cd
+Riverbraid-Safety-Gold: 97b4ed
 Riverbraid-Temporal-Gold: 23e3cf
 Riverbraid-Harness-Gold: a8f8d3
 Riverbraid-Integration-Gold: b8bef4
