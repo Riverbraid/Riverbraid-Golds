@@ -1,4 +1,7 @@
-﻿echo "🔍 Riverbraid Audit..."
-if (Test-Path ./verify-all.sh) { sh ./verify-all.sh }
-node coupling-test.mjs
-echo "✅ Audit complete."
+﻿$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$repoRoot = Split-Path -Parent $scriptPath
+$testScript = Join-Path $repoRoot "coupling-test.mjs"
+
+Write-Host "🔍 Riverbraid Audit..." -ForegroundColor Cyan
+node $testScript
+Write-Host "✅ Audit complete." -ForegroundColor Green
