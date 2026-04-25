@@ -1,9 +1,0 @@
-{
-  "constellation_name": "Riverbraid",
-  "version": "1.5.0",
-  "total_nodes": 23,
-  "primary_anchor": "de20625f9b8c7d1e8ec84f6d8f86d9f4f2b083a4",
-  "governance_type": "2-of-2",
-  "identity_fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083a4",
-  "operational_status": "STATIONARY"
-}
