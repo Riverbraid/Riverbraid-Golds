@@ -1,0 +1,193 @@
+{
+  "version": "2.4",
+  "repos_checked": 31,
+  "repos_failed": 0,
+  "results": [
+    {
+      "node": "riverbraid-action",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-audio",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-bio",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-bridge",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-core",
+      "ok": true,
+      "code": "NPM_TEST_PASSED",
+      "detail": "CORE_AUTHORITY"
+    },
+    {
+      "node": "riverbraid-crypto",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-discovery",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-documentation",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-flow",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-golds",
+      "ok": true,
+      "code": "NPM_TEST_PASSED",
+      "detail": "CORE_AUTHORITY"
+    },
+    {
+      "node": "riverbraid-governance",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-identity",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-integration",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-intelligence",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-interface",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-judicial",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-lite",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-memory",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-network",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-nexus",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-pulse",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-rdk",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-resonance",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-safety",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-safety-gold",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-security",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-spatial",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-storage",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-temporal",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-vision",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    },
+    {
+      "node": "riverbraid-weave",
+      "ok": true,
+      "code": "PARKED_METADATA_VALIDATED",
+      "detail": "PARKED_RESEARCH"
+    }
+  ]
+}
