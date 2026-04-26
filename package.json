@@ -1,8 +1,8 @@
-﻿{
+{
     "name":  "riverbraid-golds",
     "version":  "1.0.0",
     "scripts":  {
-                    "test":  "node -e \"console.log(\u0027riverbraid-golds: Verified\u0027)\"",
+                    "test":  "node audit-constellation.cjs",
                     "audit:external":  "node -e \"console.log(\u0027External Alignment: Verified (Simulated)\u0027)\""
                 }
 }
