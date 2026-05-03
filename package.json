@@ -1,4 +1,4 @@
-﻿{
+{
     "name":  "riverbraid-golds",
     "version":  "1.0.0",
     "scripts":  {
@@ -6,5 +6,8 @@
                     "audit:external":  "node -e \"console.log(\u0027External Alignment: Verified (Simulated)\u0027)\"",
                     "verify:feature-flow":  "node verify-feature-flow.cjs",
                     "test:riverbraid":  "node verify-vector.cjs"
-                }
+                },
+    "riverbraid":  {
+                       "role":  "authority"
+                   }
 }
