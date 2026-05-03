@@ -1,0 +1,14 @@
+{
+  "repo": "Riverbraid-Golds",
+  "status": "VERIFIED",
+  "verification_scope": "ring0-file-surface",
+  "claim_boundary": "declared-conditions-only",
+  "required_files": [
+    "package.json",
+    "AUTHORITY.md",
+    "RING.md"
+  ],
+  "missing_files": [],
+  "failure_codes": [],
+  "digest": "sha256:bd86fce6de7c91b68f54873a7b144d33891d390dfb26bd254e6a870ea0b70cb2"
+}
