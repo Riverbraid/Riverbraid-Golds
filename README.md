@@ -1,29 +1,20 @@
-﻿# Riverbraid-Golds
-> **Status:** ROOT_AUDIT_VERIFIED (v1.5.0)
-> **Claim Boundary:** Declared Conditions Only[cite: 2]
+# Riverbraid-Golds: Root Audit & Integrity Floor
 
-This repository is a verified node within the Riverbraid Constellation.
-It adheres to the Stationary State invariant and is audited against 
-the Riverbraid-Manifest-Gold authority gate.[cite: 1, 2]
+**STATUS:** REDUCED_FLOOR_PARTIALLY_FUNCTIONAL  
+**CLAIM_BOUNDARY:** Reduced Canonical Floor Only
 
----
-# RIVERBRAID GOLD
-The Orchestration Layer. Sovereign closed-loop reference. Anchor: Go 44.
+## Current Verification Scope
+This repository currently manages a reduced canonical verification floor. The root audit verifies the following repositories under declared smoke-check conditions:
 
-## System Context
-* **Part of the Riverbraid Constellation.**
-* **Status**: V2 (Hardened)
-* **Protocol**: Mechanical Honesty
+1. Riverbraid-Core
+2. Riverbraid-Wasm-Bridge
+3. Riverbraid-Manifest-Gold
+4. Riverbraid-Golds
+5. Riverbraid-Lang
 
-## [v2.1.0-STATIONARY] - 2026-04-25
-- **Status:** Locked / Stationary
-- **Scope:** 31-Node Full Constellation Sync
-- **Integrity:** SHA-256 Manifest + GPG Detached Signature
-- **Invariant:** Linear floor established; all nodes mirror origin/main.
+**Note:** This does not claim that all public Riverbraid repositories are active or fully verified. Broader constellation functionality is not yet claimed.
 
-## [v2.1.0-STATIONARY] - 2026-04-25
-- **Status:** Locked / Stationary
-- **Scope:** 31-Node Full Constellation Sync
-- **Integrity:** SHA-256 Manifest + GPG Detached Signature
-- **Invariant:** Linear floor established; all nodes mirror origin/main.
-
+## Usage
+To run the root audit:
+`powershell
+node audit-constellation.cjs
