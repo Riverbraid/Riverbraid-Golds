@@ -1,20 +1,42 @@
-# Riverbraid-Golds: Root Audit & Integrity Floor
+# Riverbraid-Golds
 
-**STATUS:** REDUCED_FLOOR_PARTIALLY_FUNCTIONAL  
-**CLAIM_BOUNDARY:** Reduced Canonical Floor Only
+Riverbraid-Golds coordinates constellation level registry and verification surfaces for Riverbraid.
 
-## Current Verification Scope
-This repository currently manages a reduced canonical verification floor. The root audit verifies the following repositories under declared smoke-check conditions:
+Riverbraid is an open source deterministic integrity floor for AI governance. It is designed to make structure, authority, and drift visible before trust is granted.
 
-1. Riverbraid-Core
-2. Riverbraid-Wasm-Bridge
-3. Riverbraid-Manifest-Gold
-4. Riverbraid-Golds
-5. Riverbraid-Lang
+## Role
 
-**Note:** This does not claim that all public Riverbraid repositories are active or fully verified. Broader constellation functionality is not yet claimed.
+Riverbraid-Golds supports the broader Riverbraid governance floor by organizing how repository roles, verification paths, and audit surfaces relate to one another.
 
-## Usage
-To run the root audit:
-`powershell
-node audit-constellation.cjs
+It provides:
+* Constellation orientation
+* Registry surface coordination
+* Verification path references
+* Cross repository role clarity
+* Audit surface organization
+
+## Relationship to the Evaluation Kit
+
+The preferred public starting point for outside evaluators is:
+
+```text
+Riverbraid-Evaluation-Kit
+```
+
+The Evaluation Kit provides the public 30 repository pinned registry and reproduction path.
+
+Riverbraid-Golds supports constellation level coherence. It does not replace the Evaluation Kit as the public entry point.
+
+## Verification
+
+Use the verification command declared for this repository in the active Riverbraid registry.
+
+## Evidence boundary
+
+This repository provides coordination and registry surfaces.
+
+It does not claim third party certification, legal approval, production readiness, absolute security, absence of defects, external audit, or complete AI safety.
+
+## License
+
+MIT
