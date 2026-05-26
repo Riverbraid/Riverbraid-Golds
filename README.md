@@ -4,6 +4,18 @@ Riverbraid-Golds coordinates constellation level registry and verification surfa
 
 Riverbraid is an open source deterministic integrity floor for AI governance. It is designed to make structure, authority, and drift visible before trust is granted.
 
+## Role in Riverbraid
+
+Riverbraid-Golds is a canonical constellation coordination surface within Riverbraid.
+
+## Public verification boundary
+
+This repository is part of the current Evaluation Kit canonical verification registry and supports repository role, registry, verification path, and audit surface coordination.
+
+## Evidence boundary
+
+This repository does not claim certification, legal approval, production readiness, absolute security, external audit, complete AI safety, adoption, or absence of defects.
+
 ## Role
 
 Riverbraid-Golds supports the broader Riverbraid governance floor by organizing how repository roles, verification paths, and audit surfaces relate to one another.
