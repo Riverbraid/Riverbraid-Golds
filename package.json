@@ -1,13 +1,13 @@
 {
-    "name":  "riverbraid-golds",
-    "version":  "1.0.0",
-    "scripts":  {
-                    "test":  "npm run verify:feature-flow \u0026\u0026 node audit-constellation.cjs",
-                    "audit:external":  "node -e \"console.log(\u0027External Alignment: Verified (Simulated)\u0027)\"",
-                    "verify:feature-flow":  "node verify-feature-flow.cjs",
-                    "test:riverbraid":  "node verify-vector.cjs"
-                },
-    "riverbraid":  {
-                       "role":  "authority"
-                   }
+  "name": "riverbraid-golds",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npm run verify:feature-flow && node audit-constellation.cjs",
+    "audit:external": "node -e \"console.log('External Alignment: SIMULATED_NOT_EVIDENCE')\"",
+    "verify:feature-flow": "node verify-feature-flow.cjs",
+    "test:riverbraid": "node verify-vector.cjs"
+  },
+  "riverbraid": {
+    "role": "authority"
+  }
 }
