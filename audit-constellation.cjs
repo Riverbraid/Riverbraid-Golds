@@ -1,7 +1,7 @@
 "use strict";
 const fs = require("node:fs");
 const path = require("node:path");
-const { execSync } = require("node:child_process");
+const { execFileSync } = require("node:child_process");
 
 const workspace = path.resolve(__dirname, "..");
 const manifestPath = path.join(workspace, "Riverbraid-Manifest-Gold", "riverbraid.constellation.json");
@@ -64,7 +64,7 @@ const results = floor.map((repo) => {
   }
 
   try {
-    const output = execSync("npm run test:riverbraid --silent", {
+    const output = execFileSync("npm", ["run", "test:riverbraid", "--silent"], {
       cwd: repoPath,
       encoding: "utf8",
       stdio: ["ignore", "pipe", "pipe"]
