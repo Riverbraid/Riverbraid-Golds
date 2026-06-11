@@ -1,6 +1,7 @@
 {
   "name": "riverbraid-golds",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "test": "npm run verify:feature-flow && node audit-constellation.cjs",
     "audit:external": "node -e \"console.log('External Alignment: SIMULATED_NOT_EVIDENCE')\"",
