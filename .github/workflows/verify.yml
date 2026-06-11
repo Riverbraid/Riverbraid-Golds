@@ -23,4 +23,5 @@ jobs:
           node-version: '20'
 
       - name: Verify
-        run: npm test
+        run: npm run verify:feature-flow && npm run test:riverbraid
+
