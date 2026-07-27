@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_id": "rb.environment-floor-relationship-policy",
+  "schema_version": "1.0.0",
+  "record_id": "RB-ENVIRONMENT-FLOOR-RELATIONSHIP-POLICY-001",
+  "status": "ACTIVE_NONCONTROLLING_POLICY",
+  "as_of": "2026-07-27",
+  "purpose": "Require every repository that presents itself as participating in the governance floor to declare its relationship to the Evaluation Kit environment contract.",
+  "allowed_relationships": [
+    "PINNED_TO_EVALUATION_KIT_LOCK",
+    "DECLARED_COMPATIBLE_RANGE",
+    "NOT_ON_PINNED_FLOOR",
+    "NOT_ASSESSED",
+    "BLOCKED_BY_UNRESOLVED_ENVIRONMENT"
+  ],
+  "required_declaration_fields": [
+    "repository",
+    "relationship",
+    "runtime_names_and_versions",
+    "package_manager_names_and_versions",
+    "lockfile_or_environment_record",
+    "verification_command",
+    "network_and_dependency_boundary",
+    "known_variation",
+    "claim_effect",
+    "review_trigger"
+  ],
+  "current_account_wide_status": "NOT_ASSESSED",
+  "evaluation_kit_environment_status": {
+    "node": "20.11.0",
+    "npm": "10.2.4",
+    "docker_base": "node:20.11.0-bookworm-slim",
+    "docker_digest": "UNPINNED",
+    "claim_effect": "The current Evaluation Kit environment does not support an immutable-image or fully hermetic reproduction claim."
+  },
+  "governing_rules": [
+    "A repository must not imply membership in the pinned floor merely because it uses Node or npm.",
+    "A repository outside the pinned profile must explicitly declare NOT_ON_PINNED_FLOOR or another truthful bounded relationship.",
+    "A compatible version range is not identical to an exact pinned environment.",
+    "A cache hit is not a vendored or independently preserved dependency set.",
+    "Environment declaration is not execution evidence.",
+    "Account-wide alignment is not complete until every affected repository has an attributable declaration."
+  ],
+  "nonclaims": [
+    "This policy does not classify all 52 repositories as environment-aligned.",
+    "This policy does not establish reproducibility, hermeticity, supply-chain security, or runtime success.",
+    "This policy does not change the Evaluation Kit environment lock or Dockerfile.",
+    "This policy does not close the Docker digest evidence gate."
+  ],
+  "review_triggers": [
+    "Evaluation Kit environment-lock change",
+    "Docker digest binding",
+    "repository runtime or package-manager change",
+    "registry succession",
+    "F3 functional-core profile adoption",
+    "environment mismatch or execution failure"
+  ]
+}
