@@ -36,7 +36,8 @@ The classification does not make all 52 repositories verified or operational. It
 - role, lifecycle, and verification-depth dimensions each contain exactly 52 unique repositories;
 - all three dimensions contain the same repository set;
 - F3/F4 functional-core membership remains `NOT_ASSESSED_FOR_F3_F4`;
-- the environment-policy vocabulary and current account-wide status remain internally coherent.
+- the environment-policy vocabulary and current account-wide status remain internally coherent;
+- the declared Evaluation Kit base digest and network dependency boundary match the current environment relationship policy.
 
 Run:
 
@@ -50,7 +51,21 @@ A successful validator result establishes internal structural consistency of the
 
 `ENVIRONMENT-FLOOR-RELATIONSHIP-POLICY.json` defines the bounded vocabulary every repository should use when declaring whether it is pinned to the Evaluation Kit environment, compatible under a declared range, outside the pinned floor, not yet assessed, or blocked by an unresolved environment condition.
 
-The current account-wide relationship remains `NOT_ASSESSED`. The policy does not imply that all repositories use the Evaluation Kit lock, and it preserves the current Docker-digest limitation.
+The current account-wide relationship remains `NOT_ASSESSED`.
+
+The Evaluation Kit candidate environment now declares:
+
+```text
+PLATFORM: linux/amd64
+RUNNER: ubuntu-24.04
+NODE: 20.11.0
+NPM: 10.2.4
+DOCKER_BASE: node:20.11.0-bookworm-slim
+DOCKER_DIGEST: sha256:ecc9a2581f8588014a49a523a9ed146d27963f6d988d11bd16bbdcb3598f5f98
+DEPENDENCY_ACQUISITION: NETWORK_REQUIRED_WITH_LIFECYCLE_SCRIPTS_DENIED
+```
+
+Digest pinning narrows the base-image identity. It does not make npm dependency acquisition offline, hermetic, vendored, or fully supply-chain isolated.
 
 ## Evidence boundary
 
@@ -90,7 +105,7 @@ Use the verification command declared for this repository in the active pinned r
 
 This repository provides coordination and classification surfaces.
 
-It does not claim third-party certification, legal approval, production readiness, absolute security, absence of defects, external audit, complete AI safety, registry freshness, independent reproduction, or full-constellation operation.
+It does not claim third-party certification, legal approval, production readiness, absolute security, absence of defects, external audit, complete AI safety, registry freshness, independent reproduction, hermetic dependency acquisition, or full-constellation operation.
 
 ## License
 
