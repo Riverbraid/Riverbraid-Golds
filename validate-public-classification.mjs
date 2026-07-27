@@ -2,6 +2,7 @@ import fs from "node:fs";
 
 const CLASSIFICATION_PATH = "PUBLIC-REPOSITORY-CLASSIFICATION.json";
 const ENVIRONMENT_POLICY_PATH = "ENVIRONMENT-FLOOR-RELATIONSHIP-POLICY.json";
+const EXPECTED_EVALUATION_KIT_DIGEST = "sha256:ecc9a2581f8588014a49a523a9ed146d27963f6d988d11bd16bbdcb3598f5f98";
 
 function fail(code, details = {}) {
   console.error(JSON.stringify({ status: "FAILED", code, ...details }, null, 2));
@@ -117,9 +118,18 @@ if (!allowedRelationships.includes(environmentPolicy.current_account_wide_status
     actual: environmentPolicy.current_account_wide_status
   });
 }
-if (environmentPolicy?.evaluation_kit_environment_status?.docker_digest !== "UNPINNED") {
-  fail("DOCKER_DIGEST_STATUS_CHANGED_WITHOUT_REVIEW", {
-    actual: environmentPolicy?.evaluation_kit_environment_status?.docker_digest
+
+const declaredDigest = environmentPolicy?.evaluation_kit_environment_status?.docker_digest;
+if (declaredDigest !== EXPECTED_EVALUATION_KIT_DIGEST) {
+  fail("EVALUATION_KIT_DOCKER_DIGEST_MISMATCH", {
+    expected: EXPECTED_EVALUATION_KIT_DIGEST,
+    actual: declaredDigest
+  });
+}
+
+if (environmentPolicy?.evaluation_kit_environment_status?.dependency_acquisition !== "NETWORK_REQUIRED_WITH_LIFECYCLE_SCRIPTS_DENIED") {
+  fail("EVALUATION_KIT_DEPENDENCY_BOUNDARY_MISMATCH", {
+    actual: environmentPolicy?.evaluation_kit_environment_status?.dependency_acquisition
   });
 }
 
@@ -130,5 +140,7 @@ console.log(JSON.stringify({
   lifecycle_categories: Object.keys(classification.repositories_by_lifecycle).length,
   verification_depth_categories: Object.keys(classification.repositories_by_registry_verification_depth).length,
   functional_core_membership: classification.functional_core_membership.status,
-  account_environment_relationship: environmentPolicy.current_account_wide_status
+  account_environment_relationship: environmentPolicy.current_account_wide_status,
+  evaluation_kit_docker_digest: declaredDigest,
+  evaluation_kit_dependency_boundary: environmentPolicy.evaluation_kit_environment_status.dependency_acquisition
 }, null, 2));
