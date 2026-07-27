@@ -2,10 +2,16 @@
   "name": "riverbraid-golds",
   "version": "1.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "20.11.0",
+    "npm": "10.2.4"
+  },
+  "packageManager": "npm@10.2.4",
   "scripts": {
-    "test": "npm run verify:feature-flow && node audit-constellation.cjs",
+    "test": "npm run verify:feature-flow && npm run verify:classification && node audit-constellation.cjs",
     "audit:external": "node -e \"console.log('External Alignment: SIMULATED_NOT_EVIDENCE')\"",
     "verify:feature-flow": "node verify-feature-flow.cjs",
+    "verify:classification": "node validate-public-classification.mjs",
     "test:riverbraid": "node verify-vector.cjs"
   },
   "riverbraid": {
