@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_id": "rb.public-repository-classification",
+  "schema_version": "1.0.1",
+  "record_id": "RB-PUBLIC-REPOSITORY-CLASSIFICATION-001",
+  "status": "ACTIVE_NONCONTROLLING_CLASSIFICATION",
+  "as_of": "2026-07-27",
+  "account": {
+    "login": "Riverbraid",
+    "account_type": "USER",
+    "public_repository_count": 52
+  },
+  "invariants": {
+    "role_classification": "Every listed repository appears exactly once across repositories_by_role.",
+    "role_vocabulary": [
+      "CORE_REQUIRED",
+      "CORE_SUPPORT",
+      "EXTENSION_PROFILE",
+      "EXPERIMENTAL",
+      "DOCUMENTATION",
+      "SUPERSEDED",
+      "ARCHIVED"
+    ],
+    "dimension_separation": [
+      "role classification != lifecycle status",
+      "lifecycle status != Evaluation Kit registry membership",
+      "registry membership != verification depth",
+      "verification depth != execution evidence",
+      "public visibility != F3/F4 functional-core membership"
+    ]
+  },
+  "repositories_by_role": {
+    "CORE_REQUIRED": [
+      "Riverbraid/Riverbraid-Core",
+      "Riverbraid/Riverbraid-Evaluation-Kit"
+    ],
+    "CORE_SUPPORT": [
+      "Riverbraid/Riverbraid-Cognition",
+      "Riverbraid/Riverbraid-Golds",
+      "Riverbraid/Riverbraid-Governance",
+      "Riverbraid/Riverbraid-Integrity-Floors",
+      "Riverbraid/Riverbraid-Lite",
+      "Riverbraid/Riverbraid-RDK",
+      "Riverbraid/Riverbraid-Standard-IO",
+      "Riverbraid/Riverbraid-Types",
+      "Riverbraid/Riverbraid-Verification-Suite"
+    ],
+    "EXTENSION_PROFILE": [
+      "Riverbraid/Riverbraid-Action-Gold",
+      "Riverbraid/Riverbraid-Audio-Gold",
+      "Riverbraid/Riverbraid-Bio-Gold",
+      "Riverbraid/Riverbraid-Bridge-Gold",
+      "Riverbraid/Riverbraid-Crypto-Gold",
+      "Riverbraid/Riverbraid-Discovery-Gold",
+      "Riverbraid/Riverbraid-Flow-Gold",
+      "Riverbraid/Riverbraid-GPG-Gold",
+      "Riverbraid/Riverbraid-Governance-Gold",
+      "Riverbraid/Riverbraid-Harness-Gold",
+      "Riverbraid/Riverbraid-Identity-Gold",
+      "Riverbraid/Riverbraid-Integration-Gold",
+      "Riverbraid/Riverbraid-Interface-Gold",
+      "Riverbraid/Riverbraid-Judicial-Gold",
+      "Riverbraid/Riverbraid-Manifest-Gold",
+      "Riverbraid/Riverbraid-Memory-Gold",
+      "Riverbraid/Riverbraid-Network-Gold",
+      "Riverbraid/Riverbraid-Nexus-Gold",
+      "Riverbraid/Riverbraid-Pulse-Gold",
+      "Riverbraid/Riverbraid-Refusal-Gold",
+      "Riverbraid/Riverbraid-Resonance-Gold",
+      "Riverbraid/Riverbraid-Safety-Gold",
+      "Riverbraid/Riverbraid-Security-Gold",
+      "Riverbraid/Riverbraid-Spatial-Gold",
+      "Riverbraid/Riverbraid-Storage-Gold",
+      "Riverbraid/Riverbraid-Temporal-Gold",
+      "Riverbraid/Riverbraid-Vision-Gold",
+      "Riverbraid/Riverbraid-Weave-Gold"
+    ],
+    "EXPERIMENTAL": [
+      "Riverbraid/Riverbraid-Build-V5",
+      "Riverbraid/Riverbraid-Gold-UI",
+      "Riverbraid/Riverbraid-Gold-V2",
+      "Riverbraid/Riverbraid-Hydra",
+      "Riverbraid/Riverbraid-Lang",
+      "Riverbraid/Riverbraid-Liminal-Monitoring",
+      "Riverbraid/Riverbraid-Secrets-Safe",
+      "Riverbraid/Riverbraid-Wasm-Bridge",
+      "Riverbraid/Riverbraid-p5",
+      "Riverbraid/riverbraid-ssg",
+      "Riverbraid/riverbraid-tsh"
+    ],
+    "DOCUMENTATION": [
+      "Riverbraid/.github",
+      "Riverbraid/Riverbraid-Documentation"
+    ],
+    "SUPERSEDED": [],
+    "ARCHIVED": []
+  },
+  "repositories_by_lifecycle": {
+    "CANONICAL_PUBLIC_SURFACE": [
+      "Riverbraid/Riverbraid-Action-Gold",
+      "Riverbraid/Riverbraid-Audio-Gold",
+      "Riverbraid/Riverbraid-Bio-Gold",
+      "Riverbraid/Riverbraid-Bridge-Gold",
+      "Riverbraid/Riverbraid-Cognition",
+      "Riverbraid/Riverbraid-Core",
+      "Riverbraid/Riverbraid-Crypto-Gold",
+      "Riverbraid/Riverbraid-Evaluation-Kit",
+      "Riverbraid/Riverbraid-Flow-Gold",
+      "Riverbraid/Riverbraid-GPG-Gold",
+      "Riverbraid/Riverbraid-Golds",
+      "Riverbraid/Riverbraid-Governance-Gold",
+      "Riverbraid/Riverbraid-Harness-Gold",
+      "Riverbraid/Riverbraid-Identity-Gold",
+      "Riverbraid/Riverbraid-Integration-Gold",
+      "Riverbraid/Riverbraid-Interface-Gold",
+      "Riverbraid/Riverbraid-Judicial-Gold",
+      "Riverbraid/Riverbraid-Lite",
+      "Riverbraid/Riverbraid-Manifest-Gold",
+      "Riverbraid/Riverbraid-Memory-Gold",
+      "Riverbraid/Riverbraid-Network-Gold",
+      "Riverbraid/Riverbraid-Refusal-Gold",
+      "Riverbraid/Riverbraid-Safety-Gold",
+      "Riverbraid/Riverbraid-Security-Gold",
+      "Riverbraid/Riverbraid-Standard-IO",
+      "Riverbraid/Riverbraid-Storage-Gold",
+      "Riverbraid/Riverbraid-Temporal-Gold",
+      "Riverbraid/Riverbraid-Types",
+      "Riverbraid/Riverbraid-Verification-Suite",
+      "Riverbraid/Riverbraid-Vision-Gold",
+      "Riverbraid/Riverbraid-Weave-Gold"
+    ],
+    "DEMO": [
+      "Riverbraid/Riverbraid-Gold-UI",
+      "Riverbraid/Riverbraid-Gold-V2"
+    ],
+    "DOCUMENTATION": [
+      "Riverbraid/Riverbraid-Documentation"
+    ],
+    "EXPERIMENTAL": [
+      "Riverbraid/Riverbraid-Hydra",
+      "Riverbraid/Riverbraid-p5"
+    ],
+    "OUTER_NOT_IN_REGISTRY": [
+      "Riverbraid/Riverbraid-Discovery-Gold",
+      "Riverbraid/Riverbraid-Nexus-Gold",
+      "Riverbraid/Riverbraid-Pulse-Gold",
+      "Riverbraid/Riverbraid-Resonance-Gold",
+      "Riverbraid/Riverbraid-Spatial-Gold"
+    ],
+    "SUPPORT": [
+      "Riverbraid/.github",
+      "Riverbraid/Riverbraid-Build-V5",
+      "Riverbraid/Riverbraid-Governance",
+      "Riverbraid/Riverbraid-Integrity-Floors",
+      "Riverbraid/Riverbraid-Lang",
+      "Riverbraid/Riverbraid-Liminal-Monitoring",
+      "Riverbraid/Riverbraid-RDK",
+      "Riverbraid/Riverbraid-Secrets-Safe",
+      "Riverbraid/Riverbraid-Wasm-Bridge",
+      "Riverbraid/riverbraid-ssg",
+      "Riverbraid/riverbraid-tsh"
+    ]
+  },
+  "repositories_by_registry_verification_depth": {
+    "FEATURE_FLOW_SCRIPT": [
+      "Riverbraid/Riverbraid-Golds"
+    ],
+    "NOT_IN_REGISTRY": [
+      "Riverbraid/.github",
+      "Riverbraid/Riverbraid-Build-V5",
+      "Riverbraid/Riverbraid-Discovery-Gold",
+      "Riverbraid/Riverbraid-Documentation",
+      "Riverbraid/Riverbraid-Evaluation-Kit",
+      "Riverbraid/Riverbraid-Gold-UI",
+      "Riverbraid/Riverbraid-Gold-V2",
+      "Riverbraid/Riverbraid-Governance",
+      "Riverbraid/Riverbraid-Hydra",
+      "Riverbraid/Riverbraid-Integrity-Floors",
+      "Riverbraid/Riverbraid-Lang",
+      "Riverbraid/Riverbraid-Liminal-Monitoring",
+      "Riverbraid/Riverbraid-Nexus-Gold",
+      "Riverbraid/Riverbraid-Pulse-Gold",
+      "Riverbraid/Riverbraid-RDK",
+      "Riverbraid/Riverbraid-Resonance-Gold",
+      "Riverbraid/Riverbraid-Secrets-Safe",
+      "Riverbraid/Riverbraid-Spatial-Gold",
+      "Riverbraid/Riverbraid-Wasm-Bridge",
+      "Riverbraid/Riverbraid-p5",
+      "Riverbraid/riverbraid-ssg",
+      "Riverbraid/riverbraid-tsh"
+    ],
+    "NPM_TEST_REPO_VERIFIER": [
+      "Riverbraid/Riverbraid-Action-Gold",
+      "Riverbraid/Riverbraid-Audio-Gold",
+      "Riverbraid/Riverbraid-Bio-Gold",
+      "Riverbraid/Riverbraid-Bridge-Gold",
+      "Riverbraid/Riverbraid-Cognition",
+      "Riverbraid/Riverbraid-Crypto-Gold",
+      "Riverbraid/Riverbraid-Flow-Gold",
+      "Riverbraid/Riverbraid-GPG-Gold",
+      "Riverbraid/Riverbraid-Harness-Gold",
+      "Riverbraid/Riverbraid-Identity-Gold",
+      "Riverbraid/Riverbraid-Integration-Gold",
+      "Riverbraid/Riverbraid-Interface-Gold",
+      "Riverbraid/Riverbraid-Judicial-Gold",
+      "Riverbraid/Riverbraid-Lite",
+      "Riverbraid/Riverbraid-Manifest-Gold",
+      "Riverbraid/Riverbraid-Memory-Gold",
+      "Riverbraid/Riverbraid-Network-Gold",
+      "Riverbraid/Riverbraid-Refusal-Gold",
+      "Riverbraid/Riverbraid-Safety-Gold",
+      "Riverbraid/Riverbraid-Security-Gold",
+      "Riverbraid/Riverbraid-Storage-Gold",
+      "Riverbraid/Riverbraid-Temporal-Gold",
+      "Riverbraid/Riverbraid-Vision-Gold",
+      "Riverbraid/Riverbraid-Weave-Gold"
+    ],
+    "PRESENCE_CHECK_ONLY": [
+      "Riverbraid/Riverbraid-Governance-Gold",
+      "Riverbraid/Riverbraid-Standard-IO",
+      "Riverbraid/Riverbraid-Types",
+      "Riverbraid/Riverbraid-Verification-Suite"
+    ],
+    "STATIC_VECTOR_OR_CORE_SCRIPT": [
+      "Riverbraid/Riverbraid-Core"
+    ]
+  },
+  "functional_core_membership": {
+    "status": "NOT_ASSESSED_FOR_F3_F4",
+    "rule": "No repository is included in an F3/F4 functional core by this classification record."
+  },
+  "validation": {
+    "validator": "validate-public-classification.mjs",
+    "required_success_status": "PUBLIC_CLASSIFICATION_INVARIANTS_PASS",
+    "scope": [
+      "exactly 52 unique repositories in each classification dimension",
+      "identical repository set across role, lifecycle, and registry verification depth",
+      "complete declared role vocabulary including empty categories",
+      "F3/F4 membership remains unassessed",
+      "environment policy vocabulary and current account-wide status remain internally coherent"
+    ]
+  },
+  "source_relationships": {
+    "human_view": "Riverbraid/Riverbraid-Documentation/docs/REPOSITORY_LIFECYCLE_INDEX.md",
+    "verification_depth_view": "Riverbraid/Riverbraid-Documentation/docs/VERIFICATION_DEPTH_CLASSIFICATION.md",
+    "pinned_registry": "Riverbraid/Riverbraid-Evaluation-Kit/verified-repo-registry.json"
+  },
+  "nonclaims": [
+    "Classification does not establish verification.",
+    "Registry membership does not establish equal verification depth.",
+    "This record does not claim registry freshness.",
+    "This record does not claim all 52 repositories are operational.",
+    "This record does not close F0, F1, F2, F3, or F4."
+  ],
+  "review_triggers": [
+    "public repository added, removed, archived, transferred, or renamed",
+    "Evaluation Kit registry succession",
+    "verification-depth reclassification",
+    "F3 functional-core adoption",
+    "lifecycle or authority change",
+    "classification validator failure",
+    "claim-affecting contradiction"
+  ]
+}
