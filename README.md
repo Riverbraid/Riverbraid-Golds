@@ -26,6 +26,12 @@ It keeps these dimensions separate:
 
 The classification does not make all 52 repositories verified or operational. It does not change registry pins and does not pre-adopt an F3/F4 functional core.
 
+## Environment-floor relationship
+
+`ENVIRONMENT-FLOOR-RELATIONSHIP-POLICY.json` defines the bounded vocabulary every repository should use when declaring whether it is pinned to the Evaluation Kit environment, compatible under a declared range, outside the pinned floor, not yet assessed, or blocked by an unresolved environment condition.
+
+The current account-wide relationship remains `NOT_ASSESSED`. The policy does not imply that all repositories use the Evaluation Kit lock, and it preserves the current Docker-digest limitation.
+
 ## Evidence boundary
 
 This repository does not claim certification, legal approval, production readiness, absolute security, external audit, complete AI safety, adoption, or absence of defects.
@@ -38,6 +44,7 @@ It provides:
 
 - Constellation orientation
 - Public-repository role and lifecycle classification
+- Environment-floor relationship policy
 - Registry-surface coordination
 - Verification-path references
 - Cross-repository role clarity
