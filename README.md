@@ -1,8 +1,8 @@
 # Riverbraid-Golds
 
-Riverbraid-Golds coordinates constellation level registry and verification surfaces for Riverbraid.
+Riverbraid-Golds coordinates constellation-level registry and verification surfaces for Riverbraid.
 
-Riverbraid is an open source deterministic integrity floor for AI governance. It is designed to make structure, authority, and drift visible before trust is granted.
+Riverbraid is an open-source deterministic integrity floor for AI governance. It is designed to make structure, authority, and drift visible before trust is granted.
 
 ## Role in Riverbraid
 
@@ -10,7 +10,21 @@ Riverbraid-Golds is a canonical constellation coordination surface within Riverb
 
 ## Public verification boundary
 
-This repository is part of the current Evaluation Kit canonical verification registry and supports repository role, registry, verification path, and audit surface coordination.
+This repository is part of the current Evaluation Kit canonical verification registry and supports repository role, registry, verification-path, and audit-surface coordination.
+
+## Public repository classification
+
+`PUBLIC-REPOSITORY-CLASSIFICATION.json` is the current machine-readable classification of all 52 public repositories visible under the `Riverbraid` GitHub user account as of 2026-07-27.
+
+It keeps these dimensions separate:
+
+- role classification;
+- lifecycle status;
+- Evaluation Kit registry membership;
+- registry verification depth;
+- F3/F4 functional-core membership.
+
+The classification does not make all 52 repositories verified or operational. It does not change registry pins and does not pre-adopt an F3/F4 functional core.
 
 ## Evidence boundary
 
@@ -21,11 +35,13 @@ This repository does not claim certification, legal approval, production readine
 Riverbraid-Golds supports the broader Riverbraid governance floor by organizing how repository roles, verification paths, and audit surfaces relate to one another.
 
 It provides:
-* Constellation orientation
-* Registry surface coordination
-* Verification path references
-* Cross repository role clarity
-* Audit surface organization
+
+- Constellation orientation
+- Public-repository role and lifecycle classification
+- Registry-surface coordination
+- Verification-path references
+- Cross-repository role clarity
+- Audit-surface organization
 
 ## Relationship to the Evaluation Kit
 
@@ -35,9 +51,9 @@ The preferred public starting point for outside evaluators is:
 Riverbraid-Evaluation-Kit
 ```
 
-The Evaluation Kit provides the public 30 repository pinned registry and reproduction path.
+The Evaluation Kit provides the public 30-repository pinned registry and reproduction path.
 
-Riverbraid-Golds supports constellation level coherence. It does not replace the Evaluation Kit as the public entry point.
+Riverbraid-Golds supports constellation-level coherence. It does not replace the Evaluation Kit as the public entry point.
 
 ## Verification
 
@@ -47,7 +63,7 @@ Use the verification command declared for this repository in the active Riverbra
 
 This repository provides coordination and registry surfaces.
 
-It does not claim third party certification, legal approval, production readiness, absolute security, absence of defects, external audit, or complete AI safety.
+It does not claim third-party certification, legal approval, production readiness, absolute security, absence of defects, external audit, or complete AI safety.
 
 ## License
 
