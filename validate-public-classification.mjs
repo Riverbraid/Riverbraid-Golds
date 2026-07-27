@@ -3,6 +3,7 @@ import fs from "node:fs";
 const CLASSIFICATION_PATH = "PUBLIC-REPOSITORY-CLASSIFICATION.json";
 const ENVIRONMENT_POLICY_PATH = "ENVIRONMENT-FLOOR-RELATIONSHIP-POLICY.json";
 const EXPECTED_EVALUATION_KIT_DIGEST = "sha256:ecc9a2581f8588014a49a523a9ed146d27963f6d988d11bd16bbdcb3598f5f98";
+const EXPECTED_EVALUATION_KIT_HEAD = "868341e2a26ae1ac912be170a2930034b06623ee";
 
 function fail(code, details = {}) {
   console.error(JSON.stringify({ status: "FAILED", code, ...details }, null, 2));
@@ -119,7 +120,8 @@ if (!allowedRelationships.includes(environmentPolicy.current_account_wide_status
   });
 }
 
-const declaredDigest = environmentPolicy?.evaluation_kit_environment_status?.docker_digest;
+const environmentStatus = environmentPolicy?.evaluation_kit_environment_status;
+const declaredDigest = environmentStatus?.docker_digest;
 if (declaredDigest !== EXPECTED_EVALUATION_KIT_DIGEST) {
   fail("EVALUATION_KIT_DOCKER_DIGEST_MISMATCH", {
     expected: EXPECTED_EVALUATION_KIT_DIGEST,
@@ -127,9 +129,22 @@ if (declaredDigest !== EXPECTED_EVALUATION_KIT_DIGEST) {
   });
 }
 
-if (environmentPolicy?.evaluation_kit_environment_status?.dependency_acquisition !== "NETWORK_REQUIRED_WITH_LIFECYCLE_SCRIPTS_DENIED") {
+if (environmentStatus?.docker_digest_state !== "PINNED_AND_EXACT_HEAD_EXECUTED") {
+  fail("EVALUATION_KIT_DOCKER_DIGEST_STATE_MISMATCH", {
+    actual: environmentStatus?.docker_digest_state
+  });
+}
+
+if (environmentStatus?.execution_evidence?.head_commit !== EXPECTED_EVALUATION_KIT_HEAD || environmentStatus?.execution_evidence?.result !== "SUCCESS") {
+  fail("EVALUATION_KIT_EXECUTION_EVIDENCE_MISMATCH", {
+    expectedHead: EXPECTED_EVALUATION_KIT_HEAD,
+    actualEvidence: environmentStatus?.execution_evidence
+  });
+}
+
+if (environmentStatus?.dependency_acquisition !== "NETWORK_REQUIRED_WITH_LIFECYCLE_SCRIPTS_DENIED") {
   fail("EVALUATION_KIT_DEPENDENCY_BOUNDARY_MISMATCH", {
-    actual: environmentPolicy?.evaluation_kit_environment_status?.dependency_acquisition
+    actual: environmentStatus?.dependency_acquisition
   });
 }
 
@@ -142,5 +157,7 @@ console.log(JSON.stringify({
   functional_core_membership: classification.functional_core_membership.status,
   account_environment_relationship: environmentPolicy.current_account_wide_status,
   evaluation_kit_docker_digest: declaredDigest,
-  evaluation_kit_dependency_boundary: environmentPolicy.evaluation_kit_environment_status.dependency_acquisition
+  evaluation_kit_docker_digest_state: environmentStatus.docker_digest_state,
+  evaluation_kit_execution_head: environmentStatus.execution_evidence.head_commit,
+  evaluation_kit_dependency_boundary: environmentStatus.dependency_acquisition
 }, null, 2));
