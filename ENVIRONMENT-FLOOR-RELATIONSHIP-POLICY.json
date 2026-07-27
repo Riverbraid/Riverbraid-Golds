@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schema_id": "rb.environment-floor-relationship-policy",
-  "schema_version": "1.1.0",
+  "schema_version": "1.1.1",
   "record_id": "RB-ENVIRONMENT-FLOOR-RELATIONSHIP-POLICY-001",
   "status": "ACTIVE_NONCONTROLLING_POLICY",
   "as_of": "2026-07-27",
@@ -34,24 +34,32 @@
     "npm": "10.2.4",
     "docker_base": "node:20.11.0-bookworm-slim",
     "docker_digest": "sha256:ecc9a2581f8588014a49a523a9ed146d27963f6d988d11bd16bbdcb3598f5f98",
-    "docker_digest_state": "PINNED_CANDIDATE_REQUIRES_EXACT_HEAD_EXECUTION_EVIDENCE",
+    "docker_digest_state": "PINNED_AND_EXACT_HEAD_EXECUTED",
+    "execution_evidence": {
+      "repository": "Riverbraid/Riverbraid-Evaluation-Kit",
+      "pull_request": 13,
+      "head_commit": "868341e2a26ae1ac912be170a2930034b06623ee",
+      "workflow_run": 30286309516,
+      "workflow_job": 90044856022,
+      "result": "SUCCESS"
+    },
     "dependency_acquisition": "NETWORK_REQUIRED_WITH_LIFECYCLE_SCRIPTS_DENIED",
-    "claim_effect": "The base-image identity is pinned, but network dependency acquisition still prevents an offline, hermetic, or fully supply-chain-isolated claim."
+    "claim_effect": "The base-image identity is pinned and exact-head executed, but network OS-package and npm dependency acquisition still prevents an offline, hermetic, or fully supply-chain-isolated claim."
   },
   "governing_rules": [
     "A repository must not imply membership in the pinned floor merely because it uses Node or npm.",
     "A repository outside the pinned profile must explicitly declare NOT_ON_PINNED_FLOOR or another truthful bounded relationship.",
     "A compatible version range is not identical to an exact pinned environment.",
     "A cache hit is not a vendored or independently preserved dependency set.",
-    "A digest-pinned base image does not make network dependency acquisition offline or hermetic.",
-    "Environment declaration is not execution evidence.",
+    "A digest-pinned base image does not make network OS-package or npm dependency acquisition offline or hermetic.",
+    "Environment declaration is not execution evidence unless an attributable execution record is explicitly linked.",
     "Account-wide alignment is not complete until every affected repository has an attributable declaration."
   ],
   "nonclaims": [
     "This policy does not classify all 52 repositories as environment-aligned.",
-    "This policy does not establish independent reproduction, hermeticity, supply-chain security, or runtime success.",
+    "This policy does not establish independent reproduction, hermeticity, complete supply-chain security, or future unchanged runtime success.",
     "This policy does not change the Evaluation Kit registry or expected results.",
-    "The pinned digest becomes execution-supported only when the exact digest-bound Evaluation Kit head completes successfully."
+    "One successful exact-head run does not establish account-wide environment alignment."
   ],
   "review_triggers": [
     "Evaluation Kit environment-lock change",
