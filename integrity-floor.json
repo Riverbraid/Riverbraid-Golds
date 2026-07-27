@@ -1,5 +1,14 @@
 {
-    "expected_hash": "81a4f171d0b94d01f54eafca245821055c51d18824028b23b9b392a264f8f9f8",
+    "expected_hash": "9dd53dbad5e57f0d71fcd6aa81553191128ed4c265a81952924ccd014fd4aa0e",
     "status": "HARDENED",
-    "claim_boundary": "spatial-only"
+    "claim_boundary": "spatial-only",
+    "binding": {
+        "ordered_files": [
+            "package.json",
+            "verify-vector.cjs"
+        ],
+        "algorithm": "SHA-256_CONCATENATED_EXACT_BYTES",
+        "package_blob": "9d61e8f6bbe74fcbeca978360c3d98808c5545e8",
+        "verify_vector_blob": "c5a35f835a261d8a186a41dcfe0b34e3619274b4"
+    }
 }
