@@ -37,7 +37,7 @@ The classification does not make all 52 repositories verified or operational. It
 - all three dimensions contain the same repository set;
 - F3/F4 functional-core membership remains `NOT_ASSESSED_FOR_F3_F4`;
 - the environment-policy vocabulary and current account-wide status remain internally coherent;
-- the declared Evaluation Kit base digest and network dependency boundary match the current environment relationship policy.
+- the declared Evaluation Kit base digest, exact execution identity, and network dependency boundary match the current environment relationship policy.
 
 Run:
 
@@ -53,7 +53,7 @@ A successful validator result establishes internal structural consistency of the
 
 The current account-wide relationship remains `NOT_ASSESSED`.
 
-The Evaluation Kit candidate environment now declares:
+The Evaluation Kit draft environment has exact-head execution evidence for:
 
 ```text
 PLATFORM: linux/amd64
@@ -62,10 +62,12 @@ NODE: 20.11.0
 NPM: 10.2.4
 DOCKER_BASE: node:20.11.0-bookworm-slim
 DOCKER_DIGEST: sha256:ecc9a2581f8588014a49a523a9ed146d27963f6d988d11bd16bbdcb3598f5f98
+EXECUTION_HEAD: 868341e2a26ae1ac912be170a2930034b06623ee
+EXECUTION_RUN: 30286309516
 DEPENDENCY_ACQUISITION: NETWORK_REQUIRED_WITH_LIFECYCLE_SCRIPTS_DENIED
 ```
 
-Digest pinning narrows the base-image identity. It does not make npm dependency acquisition offline, hermetic, vendored, or fully supply-chain isolated.
+Digest pinning and exact-head execution narrow the base-image identity. They do not make OS-package or npm dependency acquisition offline, hermetic, vendored, or fully supply-chain isolated.
 
 ## Evidence boundary
 
