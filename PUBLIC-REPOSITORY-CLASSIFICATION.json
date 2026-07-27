@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schema_id": "rb.public-repository-classification",
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "record_id": "RB-PUBLIC-REPOSITORY-CLASSIFICATION-001",
   "status": "ACTIVE_NONCONTROLLING_CLASSIFICATION",
   "as_of": "2026-07-27",
@@ -45,23 +45,6 @@
       "Riverbraid/Riverbraid-Types",
       "Riverbraid/Riverbraid-Verification-Suite"
     ],
-    "DOCUMENTATION": [
-      "Riverbraid/.github",
-      "Riverbraid/Riverbraid-Documentation"
-    ],
-    "EXPERIMENTAL": [
-      "Riverbraid/Riverbraid-Build-V5",
-      "Riverbraid/Riverbraid-Gold-UI",
-      "Riverbraid/Riverbraid-Gold-V2",
-      "Riverbraid/Riverbraid-Hydra",
-      "Riverbraid/Riverbraid-Lang",
-      "Riverbraid/Riverbraid-Liminal-Monitoring",
-      "Riverbraid/Riverbraid-Secrets-Safe",
-      "Riverbraid/Riverbraid-Wasm-Bridge",
-      "Riverbraid/Riverbraid-p5",
-      "Riverbraid/riverbraid-ssg",
-      "Riverbraid/riverbraid-tsh"
-    ],
     "EXTENSION_PROFILE": [
       "Riverbraid/Riverbraid-Action-Gold",
       "Riverbraid/Riverbraid-Audio-Gold",
@@ -91,7 +74,26 @@
       "Riverbraid/Riverbraid-Temporal-Gold",
       "Riverbraid/Riverbraid-Vision-Gold",
       "Riverbraid/Riverbraid-Weave-Gold"
-    ]
+    ],
+    "EXPERIMENTAL": [
+      "Riverbraid/Riverbraid-Build-V5",
+      "Riverbraid/Riverbraid-Gold-UI",
+      "Riverbraid/Riverbraid-Gold-V2",
+      "Riverbraid/Riverbraid-Hydra",
+      "Riverbraid/Riverbraid-Lang",
+      "Riverbraid/Riverbraid-Liminal-Monitoring",
+      "Riverbraid/Riverbraid-Secrets-Safe",
+      "Riverbraid/Riverbraid-Wasm-Bridge",
+      "Riverbraid/Riverbraid-p5",
+      "Riverbraid/riverbraid-ssg",
+      "Riverbraid/riverbraid-tsh"
+    ],
+    "DOCUMENTATION": [
+      "Riverbraid/.github",
+      "Riverbraid/Riverbraid-Documentation"
+    ],
+    "SUPERSEDED": [],
+    "ARCHIVED": []
   },
   "repositories_by_lifecycle": {
     "CANONICAL_PUBLIC_SURFACE": [
@@ -227,6 +229,17 @@
     "status": "NOT_ASSESSED_FOR_F3_F4",
     "rule": "No repository is included in an F3/F4 functional core by this classification record."
   },
+  "validation": {
+    "validator": "validate-public-classification.mjs",
+    "required_success_status": "PUBLIC_CLASSIFICATION_INVARIANTS_PASS",
+    "scope": [
+      "exactly 52 unique repositories in each classification dimension",
+      "identical repository set across role, lifecycle, and registry verification depth",
+      "complete declared role vocabulary including empty categories",
+      "F3/F4 membership remains unassessed",
+      "environment policy vocabulary and current account-wide status remain internally coherent"
+    ]
+  },
   "source_relationships": {
     "human_view": "Riverbraid/Riverbraid-Documentation/docs/REPOSITORY_LIFECYCLE_INDEX.md",
     "verification_depth_view": "Riverbraid/Riverbraid-Documentation/docs/VERIFICATION_DEPTH_CLASSIFICATION.md",
@@ -245,6 +258,7 @@
     "verification-depth reclassification",
     "F3 functional-core adoption",
     "lifecycle or authority change",
+    "classification validator failure",
     "claim-affecting contradiction"
   ]
 }
