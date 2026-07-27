@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schema_id": "rb.environment-floor-relationship-policy",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "record_id": "RB-ENVIRONMENT-FLOOR-RELATIONSHIP-POLICY-001",
   "status": "ACTIVE_NONCONTROLLING_POLICY",
   "as_of": "2026-07-27",
@@ -27,29 +27,36 @@
   ],
   "current_account_wide_status": "NOT_ASSESSED",
   "evaluation_kit_environment_status": {
+    "platform": "linux/amd64",
+    "github_actions_runner": "ubuntu-24.04",
+    "checkout_action": "actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
     "node": "20.11.0",
     "npm": "10.2.4",
     "docker_base": "node:20.11.0-bookworm-slim",
-    "docker_digest": "UNPINNED",
-    "claim_effect": "The current Evaluation Kit environment does not support an immutable-image or fully hermetic reproduction claim."
+    "docker_digest": "sha256:ecc9a2581f8588014a49a523a9ed146d27963f6d988d11bd16bbdcb3598f5f98",
+    "docker_digest_state": "PINNED_CANDIDATE_REQUIRES_EXACT_HEAD_EXECUTION_EVIDENCE",
+    "dependency_acquisition": "NETWORK_REQUIRED_WITH_LIFECYCLE_SCRIPTS_DENIED",
+    "claim_effect": "The base-image identity is pinned, but network dependency acquisition still prevents an offline, hermetic, or fully supply-chain-isolated claim."
   },
   "governing_rules": [
     "A repository must not imply membership in the pinned floor merely because it uses Node or npm.",
     "A repository outside the pinned profile must explicitly declare NOT_ON_PINNED_FLOOR or another truthful bounded relationship.",
     "A compatible version range is not identical to an exact pinned environment.",
     "A cache hit is not a vendored or independently preserved dependency set.",
+    "A digest-pinned base image does not make network dependency acquisition offline or hermetic.",
     "Environment declaration is not execution evidence.",
     "Account-wide alignment is not complete until every affected repository has an attributable declaration."
   ],
   "nonclaims": [
     "This policy does not classify all 52 repositories as environment-aligned.",
-    "This policy does not establish reproducibility, hermeticity, supply-chain security, or runtime success.",
-    "This policy does not change the Evaluation Kit environment lock or Dockerfile.",
-    "This policy does not close the Docker digest evidence gate."
+    "This policy does not establish independent reproduction, hermeticity, supply-chain security, or runtime success.",
+    "This policy does not change the Evaluation Kit registry or expected results.",
+    "The pinned digest becomes execution-supported only when the exact digest-bound Evaluation Kit head completes successfully."
   ],
   "review_triggers": [
     "Evaluation Kit environment-lock change",
-    "Docker digest binding",
+    "Docker base tag or digest change",
+    "GitHub runner or action identity change",
     "repository runtime or package-manager change",
     "registry succession",
     "F3 functional-core profile adoption",
